@@ -1,4 +1,5 @@
 import json
+import random
 from tqdm import tqdm
 
 from ingestion.arxiv_fetcher import fetch_papers
@@ -7,30 +8,34 @@ from processing.cleaner import clean_text
 from processing.formatter import format_dataset
 
 from llm.local_llm import local_summarize
-from llm.openrouter_llm import openrouter_generate
-
 from configs.config import MAX_PAPERS, SAVE_PATH
 
+# Diverse instructions to make training more robust
+INSTRUCTION_VARIANTS = [
+    "Analyze research paper",
+    "Summarize this research abstract",
+    "Identify the methodology and research gaps in this paper",
+    "Give me a technical breakdown of this paper including its methods and gaps",
+    "Extract the core information from this research text",
+    "Read this abstract and summarize it",
+    "What are the key takeaways from this research?",
+    "Analyze this paper's abstract and find its methodology",
+    "Synthesize the summary, methods, and gaps for this research paper",
+    "Break down this abstract for technical analysis"
+]
 
+# Simplified to Local Only
 def smart_generate(text):
-    try:
-        # 1. Local (default)
-        if len(text) < 500:
-            return local_summarize(text)
-
-        # 2. OpenRouter (FREE API)
-        return openrouter_generate(text)
-
-    except Exception as e:
-        print("Fallback to local:", e)
-        return local_summarize(text)
+    return local_summarize(text)
 
 
 def run_pipeline():
     papers = fetch_papers(max_results=MAX_PAPERS)
     dataset = []
 
-    for paper in tqdm(papers):
+    print(f"Starting pipeline... Progressive saving every 10 items. Using {len(INSTRUCTION_VARIANTS)} variants.")
+
+    for i, paper in enumerate(tqdm(papers)):
         try:
             extracted = extract_basic_info(paper)
             abstract = clean_text(extracted["abstract"])
@@ -38,24 +43,32 @@ def run_pipeline():
             # Integrated generation strategy
             structured_output = smart_generate(abstract)
 
+            # Randomize instruction
+            instruction = random.choice(INSTRUCTION_VARIANTS)
+
             # Format dataset
             data = format_dataset(
-                instruction="Analyze research paper",
+                instruction=instruction,
                 input_text=abstract,
                 output_text=structured_output
             )
 
             dataset.append(data)
 
+            # Progressive saving every 10 items
+            if (i + 1) % 10 == 0:
+                with open(SAVE_PATH, "w") as f:
+                    json.dump(dataset, f, indent=2)
+
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Error on paper {i}: {e}")
             continue
 
-    # Save dataset
+    # Final save for all items
     with open(SAVE_PATH, "w") as f:
         json.dump(dataset, f, indent=2)
 
-    print(f"Dataset saved to {SAVE_PATH}")
+    print(f"Dataset complete. Total {len(dataset)} items saved to {SAVE_PATH}")
 
 
 if __name__ == "__main__":
