@@ -1,0 +1,10 @@
+arxiv
+requests
+beautifulsoup4
+pandas
+tqdm
+transformers
+datasets
+ollama
+google-generativeai
+python-dotenv
