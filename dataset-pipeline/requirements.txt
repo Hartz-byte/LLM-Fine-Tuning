@@ -6,5 +6,4 @@ tqdm
 transformers
 datasets
 ollama
-google-generativeai
 python-dotenv

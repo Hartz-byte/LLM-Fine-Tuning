@@ -7,16 +7,22 @@ from processing.cleaner import clean_text
 from processing.formatter import format_dataset
 
 from llm.local_llm import local_summarize
-from llm.api_llm import generate_structured_output
+from llm.openrouter_llm import openrouter_generate
 
 from configs.config import MAX_PAPERS, SAVE_PATH
 
 
-def safe_generate(text):
+def smart_generate(text):
     try:
-        return generate_structured_output(text)
+        # 1. Local (default)
+        if len(text) < 500:
+            return local_summarize(text)
+
+        # 2. OpenRouter (FREE API)
+        return openrouter_generate(text)
+
     except Exception as e:
-        print("Gemini failed, fallback to local model:", e)
+        print("Fallback to local:", e)
         return local_summarize(text)
 
 
@@ -27,14 +33,10 @@ def run_pipeline():
     for paper in tqdm(papers):
         try:
             extracted = extract_basic_info(paper)
-            
             abstract = clean_text(extracted["abstract"])
 
-            # Step 1: Local LLM (cheap)
-            summary = local_summarize(abstract)
-
-            # Step 2: API LLM (high-quality)
-            structured_output = safe_generate(abstract)
+            # Integrated generation strategy
+            structured_output = smart_generate(abstract)
 
             # Format dataset
             data = format_dataset(
