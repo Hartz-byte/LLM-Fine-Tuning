@@ -1,0 +1,17 @@
+{
+  "model_id": "mistralai/Mistral-7B-Instruct-v0.2",
+  "num_samples": 50,
+  "rouge": {
+    "rouge1": 0.5695318822440322,
+    "rouge2": 0.3576774844770573,
+    "rougeL": 0.43849877285630545,
+    "rougeLsum": 0.5107423602383044
+  },
+  "avg_bertscore_f1": 0.9106939399242401,
+  "schema_field_recall": 0.9428571428571428,
+  "exact_schema_match": 0.88,
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  }
+}
