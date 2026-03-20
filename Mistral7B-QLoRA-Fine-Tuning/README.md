@@ -22,6 +22,9 @@ The objective of this fine-tuning stage is to improve the base model’s ability
 
 This is a task-oriented fine-tuning setup for **instruction-following structured extraction and analysis** over scientific text.
 
+**Kaggle Notebook**: [Mistral-7B QLoRA Fine-Tuning](https://www.kaggle.com/code/hartzbyte/mistral7b-fine-tuning)
+
+
 ---
 
 ## Task Definition

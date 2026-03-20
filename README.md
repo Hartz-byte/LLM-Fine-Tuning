@@ -30,12 +30,16 @@ A modular, automated system that fetches research papers and uses local LLMs to 
 A rigorous benchmarking of the un-tuned Mistral model on the specific task.
 - **Technique**: Zero-shot prompting with Mistral-specific instruction tags.
 - **Metrics**: ROUGE, BERTScore, and Schema Match Accuracy.
+- **Kaggle Notebook**: [Baseline Evaluation](https://www.kaggle.com/code/hartzbyte/mistral7b-baseline-evaluation)
+
 
 ### 3. QLoRA Fine-Tuning
 Parameter-efficient adaptation of the Mistral model to the custom dataset.
 - **Method**: 4-bit Quantized Low-Rank Adaptation.
 - **Hardware**: Optimized for consumer-grade GPUs (T4/P100).
 - **Result**: A specialized adapter that achieves perfect schema compliance.
+- **Kaggle Notebook**: [QLoRA Fine-Tuning](https://www.kaggle.com/code/hartzbyte/mistral7b-fine-tuning)
+
 
 ---
 

@@ -10,6 +10,8 @@ The objective of this evaluation is to assess how well the base Mistral model ca
 - **Input**: Scientific Research Paper Abstract.
 - **Goal**: Generate a structured analysis based on specific instruction keys.
 - **Constraints**: Follow a strict schema and remain faithful to the source text.
+- **Kaggle Notebook**: [Mistral-7B Baseline Evaluation](https://www.kaggle.com/code/hartzbyte/mistral7b-baseline-evaluation)
+
 
 ## Dataset & Alignment
 
