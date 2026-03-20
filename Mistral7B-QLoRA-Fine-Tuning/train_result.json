@@ -1,0 +1,6 @@
+{
+  "train_runtime": 11463.407,
+  "train_loss": 1.3003649457295736,
+  "train_samples": 1193,
+  "val_samples": 150
+}

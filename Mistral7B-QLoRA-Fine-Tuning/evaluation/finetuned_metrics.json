@@ -1,0 +1,30 @@
+{
+  "model_id": "mistralai/Mistral-7B-Instruct-v0.2",
+  "adapter_path": "/kaggle/working/qlora_mistral_research/adapter",
+  "num_test_samples_total": 50,
+  "num_test_samples_used": 50,
+  "num_test_samples_skipped": 0,
+  "rouge": {
+    "rouge1": 0.6630158442347706,
+    "rouge2": 0.47227248669420663,
+    "rougeL": 0.5441058295425546,
+    "rougeLsum": 0.6132428067051732
+  },
+  "avg_bertscore_f1": 0.9307381129264831,
+  "schema_field_recall": 1.0,
+  "exact_schema_match": 1.0,
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "train_config": {
+    "epochs": 2,
+    "learning_rate": 0.0002,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_seq_length": 1024,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05
+  }
+}

@@ -1,0 +1,812 @@
+[
+  {
+    "id": 0,
+    "instruction": "Extract a summary, methods, and gaps for this research paper.",
+    "input": "This paper introduces a novel Bayesian learning model to explain the behavior of Large Language Models (LLMs), focusing on their core optimization metric of next token prediction. We develop a theoretical framework based on an ideal generative text model represented by a multinomial transition probability matrix with a prior, and examine how LLMs approximate this matrix. Key contributions include: (i) a continuity theorem relating embeddings to multinomial distributions, (ii) a demonstration that LLM text generation aligns with Bayesian learning principles, (iii) an explanation for the emergence of in-context learning in larger models, (iv) empirical validation using visualizations of next token probabilities from an instrumented Llama model Our findings provide new insights into LLM functioning, offering a statistical foundation for understanding their capabilities and limitations. This framework has implications for LLM design, training, and application, potentially guiding future developments in the field.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "summary:\n- The paper presents a new Bayesian learning model to elucidate the behavior of Large Language Models (LLMs), particularly focusing on their core optimization metric, next token prediction.\n- A theoretical framework is developed using an ideal generative text model represented by a multinomial transition probability matrix with a prior.\n- The study investigates how LLMs approximate this matrix.\n- Key contributions include a continuity theorem relating embeddings to multinomial distributions, demonstration of LLM text generation aligning with Bayesian learning principles, an explanation for the emergence of in-context learning in larger models, and empirical validation using visualizations of next token probabilities from an instrumented Llama model.\n- The findings offer new insights into LLM functioning, providing a statistical foundation for understanding their capabilities and limitations.\nmethods:\n- Development of a theoretical framework based on an ideal generative text model represented by a multinomial transition probability matrix with a prior.\n- Examination of how LLMs approximate the aforementioned matrix.\n- Empirical validation using visualizations of next token probabilities from an instrumented Llama model.\ngaps:\n- The study could potentially investigate the applicability and limitations of this framework in various practical scenarios, such as diverse language models or unconventional application domains.\n- Future work could explore extensions to the theoretical framework to account for more complex aspects of LLM behavior, like handling long-range dependencies or multi-modal data.",
+    "prediction_text": "summary:\n- The paper presents a Bayesian learning model to explain the behavior of Large Language Models (LLMs), focusing on their core optimization metric of next token prediction.\n- A theoretical framework is developed based on an ideal generative text model represented by a multinomial transition probability matrix with a prior.\n- The paper demonstrates how LLMs approximate this matrix and provides insights into their functioning.\n- Key contributions include a continuity theorem relating embeddings to multinomial distributions, alignment of LLM text generation with Bayesian learning principles, explanation for the emergence of in-context learning in larger models, and empirical validation using visualizations of next token probabilities from an instrumented Llama model.\nmethods:\n- Development of a theoretical framework based on an ideal generative text model represented by a multinomial transition probability matrix with a prior.\n- Examination of how LLMs approximate this matrix.\n- Demonstration of LLM text generation aligning with Bayesian learning principles.\n- Explanation for the emergence of in-context learning in larger models.\n- Empirical validation using visualizations of next token probabilities from an instrumented Llama model.\ngaps:\n- The paper does not provide a comprehensive comparison between the proposed Bayesian learning model and other existing models for explaining LLM behavior.\n- It also lacks an analysis of the practical implications of this framework for improving LLM design, training, and application.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 1,
+    "instruction": "Give me a technical breakdown of this paper.",
+    "input": "To enhance productivity and to streamline workflows, there is a growing trend to embed large language model (LLM) functionality into applications, from browser-based web apps to native apps that run on personal computers. Here, we introduce LLM-for-X, a system-wide shortcut layer that seamlessly augments any application with LLM services through a lightweight popup dialog. Our native layer seamlessly connects front-end applications to popular LLM backends, such as ChatGPT and Gemini, using their uniform chat front-ends as the programming interface or their custom API calls. We demonstrate the benefits of LLM-for-X across a wide variety of applications, including Microsoft Office, VSCode, and Adobe Acrobat as well as popular web apps such as Overleaf. In our evaluation, we compared LLM-for-X with ChatGPT's web interface in a series of tasks, showing that our approach can provide users with quick, efficient, and easy-to-use LLM assistance without context switching to support writing and reading tasks that is agnostic of the specific application.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps",
+      "evaluation"
+    ],
+    "reference_text": "summary:\n- The abstract introduces LLM-for-X, a system-wide shortcut layer that seamlessly integrates large language model (LLM) services into various applications, improving productivity and streamlining workflows.\n- The system connects front-end applications to popular LLM backends like ChatGPT and Gemini, using their uniform chat front-ends or custom API calls.\n- Applications demonstrated include Microsoft Office, VSCode, Adobe Acrobat, Overleaf, and more.\nmethods:\n- The method involves creating a lightweight popup dialog that augments any application with LLM services.\n- The native layer connects applications to popular LLM backends for quick and easy integration.\ngaps:\n- Information about the specific implementation details or challenges encountered during development is not provided in this abstract.\nevaluation:\n- In the evaluation, LLM-for-X was compared with ChatGPT's web interface in a series of tasks, showing that our approach provides quick, efficient, and easy-to-use LLM assistance without context switching.\n- The evaluation was conducted to demonstrate the benefits of LLM-for-X across various applications.",
+    "prediction_text": "summary:\n- The abstract discusses LLM-for-X, a system-wide shortcut layer that integrates large language model (LLM) functionality into various applications. This includes web apps, native apps, and popular software like Microsoft Office, VSCode, Adobe Acrobat, and Overleaf. The goal is to enhance productivity by providing quick, efficient, and easy-to-use LLM assistance without requiring context switching.\nmethods:\n- LLM-for-X is a native layer that connects front-end applications to popular LLM backends such as ChatGPT and Gemini using their uniform chat front-ends or custom API calls.\n- The system seamlessly embeds LLM services into applications through a lightweight popup dialog.\ngaps:\n- The abstract does not explicitly mention any identified gaps or limitations in the current implementation of LLM-for-X.\nevaluation:\n- An evaluation was conducted comparing LLM-for-X with ChatGPT's web interface across a series of tasks. The results showed that LLM-for-X can provide users with quick, efficient, and easy-to-use LLM assistance without context switching for writing and reading tasks, regardless of the specific application.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true,
+      "evaluation": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 2,
+    "instruction": "Give me a technical breakdown of this paper.",
+    "input": "Large language models (LLMs) have shown significant potential for robotics applications, particularly task planning, by harnessing their language comprehension and text generation capabilities. However, in applications such as household robotics, a critical gap remains in the personalization of these models to individual user preferences. We introduce LLM-Personalize, a novel framework with an optimization pipeline designed to personalize LLM planners for household robotics. Our LLM-Personalize framework features an LLM planner that performs iterative planning in multi-room, partially-observable household scenarios, making use of a scene graph constructed with local observations. The generated plan consists of a sequence of high-level actions which are subsequently executed by a controller. Central to our approach is the optimization pipeline, which combines imitation learning and iterative self-training to personalize the LLM planner. In particular, the imitation learning phase performs initial LLM alignment from demonstrations, and bootstraps the model to facilitate effective iterative self-training, which further explores and aligns the model to user preferences. We evaluate LLM-Personalize on Housekeep, a challenging simulated real-world 3D benchmark for household rearrangements, and show that LLM-Personalize achieves more than a 30 percent increase in success rate over existing LLM planners, showcasing significantly improved alignment with human preferences. Project page: https://gdg94.github.io/projectllmpersonalize/.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps",
+      "evaluation"
+    ],
+    "reference_text": "summary:\n- The abstract discusses a novel framework named LLM-Personalize for personalizing Large Language Models (LLMs) in the context of household robotics.\nmethods:\n- LLM planner performing iterative planning in multi-room, partially-observable household scenarios.\n- Construction of a scene graph using local observations.\n- Sequence of high-level actions generated and executed by a controller.\n- Optimization pipeline combining imitation learning and iterative self-training to personalize the LLM planner.\n- Initial LLM alignment from demonstrations in the imitation learning phase.\n- Bootstrapping the model to facilitate effective iterative self-training.\ngaps:\n- Personalization of LLMs to individual user preferences in applications such as household robotics.\nevaluation:\n- Evaluation on Housekeep, a simulated real-world 3D benchmark for household rearrangements.\n- Achievement of more than a 30 percent increase in success rate over existing LLM planners.\n- Improved alignment with human preferences showcased.",
+    "prediction_text": "summary:\n- The abstract discusses the application of large language models (LLMs) in robotics, specifically for task planning in household scenarios. The focus is on personalizing these models to individual user preferences.\n- The introduction of LLM-Personalize, a novel framework designed to personalize LLM planners for household robotics.\nmethods:\n- The LLM planner performs iterative planning in multi-room, partially-observable household scenarios using a scene graph constructed with local observations.\n- The generated plan consists of a sequence of high-level actions which are subsequently executed by a controller.\n- The optimization pipeline combines imitation learning and iterative self-training to personalize the LLM planner.\n- In the imitation learning phase, the model is initially aligned from demonstrations and bootstrapped for effective iterative self-training.\n- The iterative self-training further explores and aligns the model to user preferences.\ngaps:\n- A critical gap identified is the personalization of these models to individual user preferences in applications such as household robotics.\nevaluation:\n- The evaluation of LLM-Personalize on Housekeep, a challenging simulated real-world 3D benchmark for household rearrangements, shows that it achieves more than a 30 percent increase in success rate over existing LLM planners.\n- This demonstrates significantly improved alignment with human preferences.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true,
+      "evaluation": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 3,
+    "instruction": "Find contradictions in this research and identify its methodology.",
+    "input": "LLMs have demonstrated great capabilities in various NLP tasks. Different entities can further improve the performance of those LLMs on their specific downstream tasks by fine-tuning LLMs. When several entities have similar interested tasks, but their data cannot be shared because of privacy concerns regulations, federated learning (FL) is a mainstream solution to leverage the data of different entities. However, fine-tuning LLMs in federated learning settings still lacks adequate support from existing FL frameworks because it has to deal with optimizing the consumption of significant communication and computational resources, data preparation for different tasks, and distinct information protection demands. This paper first discusses these challenges of federated fine-tuning LLMs, and introduces our package FS-LLM as a main contribution, which consists of the following components: (1) we build an end-to-end benchmarking pipeline, automizing the processes of dataset preprocessing, federated fine-tuning execution, and performance evaluation on federated LLM fine-tuning; (2) we provide comprehensive federated parameter-efficient fine-tuning algorithm implementations and versatile programming interfaces for future extension in FL scenarios with low communication and computation costs, even without accessing the full model; (3) we adopt several accelerating and resource-efficient operators for fine-tuning LLMs with limited resources and the flexible pluggable sub-routines for interdisciplinary study. We conduct extensive experiments to validate the effectiveness of FS-LLM and benchmark advanced LLMs with state-of-the-art parameter-efficient fine-tuning algorithms in FL settings, which also yields valuable insights into federated fine-tuning LLMs for the research community. To facilitate further research and adoption, we release FS-LLM at https://github.com/alibaba/FederatedScope/tree/llm.",
+    "expected_fields": [
+      "contradictions",
+      "methods"
+    ],
+    "reference_text": "contradictions:\nThe abstract does not mention any specific contradictions in the context of federated fine-tuning LLMs.\nmethods:\n- End-to-end benchmarking pipeline for dataset preprocessing, federated fine-tuning execution, and performance evaluation on federated LLM fine-tuning\n- Comprehensive federated parameter-efficient fine-tuning algorithm implementations and versatile programming interfaces for FL scenarios with low communication and computation costs\n- Accelerating and resource-efficient operators for fine-tuning LLMs with limited resources\n- Flexible pluggable sub-routines for interdisciplinary study",
+    "prediction_text": "contradictions:\nThe abstract does not mention any contradictions in the context of federated learning (FL) for fine-tuning LLMs.\nmethods:\n- Building an end-to-end benchmarking pipeline for dataset preprocessing, federated fine-tuning execution, and performance evaluation on federated LLM fine-tuning.\n- Providing comprehensive federated parameter-efficient fine-tuning algorithm implementations and versatile programming interfaces for future extension in FL scenarios with low communication and computation costs, even without accessing the full model.\n- Adopting several accelerating and resource-efficient operators for fine-tuning LLMs with limited resources and the flexible pluggable sub-routines for interdisciplinary study.",
+    "schema_check": {
+      "contradictions": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 4,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "We investigate the existence and persistence of a specific type of gender bias in some of the popular LLMs and contribute a new benchmark dataset, RealWorldQuestioning (released on HuggingFace ), developed from real-world questions across four key domains in business and health contexts: education, jobs, personal financial management, and general health. We define and study entropy bias, which we define as a discrepancy in the amount of information generated by an LLM in response to real questions users have asked. We tested this using four different LLMs and evaluated the generated responses both qualitatively and quantitatively by using ChatGPT-4o (as \"LLM-as-judge\"). Our analyses (metric-based comparisons and \"LLM-as-judge\" evaluation) suggest that there is no significant bias in LLM responses for men and women at a category level. However, at a finer granularity (the individual question level), there are substantial differences in LLM responses for men and women in the majority of cases, which \"cancel\" each other out often due to some responses being better for males and vice versa. This is still a concern since typical users of these tools often ask a specific question (only) as opposed to several varied ones in each of these common yet important areas of life. We suggest a simple debiasing approach that iteratively merges the responses for the two genders to produce a final result. Our approach demonstrates that a simple, prompt-based debiasing strategy can effectively debias LLM outputs, thus producing responses with higher information content than both gendered variants in 78% of the cases, and consistently achieving a balanced integration in the remaining cases.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- The study investigates gender bias in popular LLMs, introducing RealWorldQuestioning dataset from business and health domains (education, jobs, personal finance, health). The research focuses on entropy bias, a discrepancy in the information generated by LLMs. Tested with four LLMs, responses were evaluated both qualitatively and quantitatively using ChatGPT-4o. Findings show no significant bias at category level but substantial differences at individual question level for men and women, often canceling out. A simple debiasing approach is suggested to merge gendered responses, which demonstrates improvement in information content in 78% of cases while maintaining balance in the rest.",
+    "prediction_text": "summary:\n- The study investigates gender bias in popular Language Models (LLMs) using a new benchmark dataset, RealWorldQuestioning, across four key domains: education, jobs, personal financial management, and general health. The research suggests that there is no significant bias at a category level but substantial differences at the individual question level, which often 'cancel' each other out due to some responses being better for males and vice versa. A simple debiasing approach is proposed to merge responses for both genders, demonstrating effective debiasing in 78% of cases and balanced integration in the remaining cases.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 5,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Recent work has aimed to capture nuances of human behavior by using LLMs to simulate responses from particular demographics in settings like social science experiments and public opinion surveys. However, there are currently no established ways to discuss or evaluate the quality of such LLM simulations. Moreover, there is growing concern that these LLM simulations are flattened caricatures of the personas that they aim to simulate, failing to capture the multidimensionality of people and perpetuating stereotypes. To bridge these gaps, we present CoMPosT, a framework to characterize LLM simulations using four dimensions: Context, Model, Persona, and Topic. We use this framework to measure open-ended LLM simulations' susceptibility to caricature, defined via two criteria: individuation and exaggeration. We evaluate the level of caricature in scenarios from existing work on LLM simulations. We find that for GPT-4, simulations of certain demographics (political and marginalized groups) and topics (general, uncontroversial) are highly susceptible to caricature.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- The abstract discusses the use of Large Language Models (LLMs) to simulate responses from specific demographics in social science experiments and surveys. However, there is no established method for discussing or evaluating the quality of such simulations, raising concerns that they may be oversimplified caricatures. To address this, a new framework called CoMPosT is presented. It characterizes LLM simulations across four dimensions: Context, Model, Persona, and Topic. The study uses this framework to measure the susceptibility of open-ended LLM simulations to caricature, defined by individuation and exaggeration criteria. Evaluations show that GPT-4 simulations for certain demographics (political and marginalized groups) and topics (general, uncontroversial) are highly prone to caricature.",
+    "prediction_text": "summary:\n- The abstract discusses the use of Large Language Models (LLMs) to simulate responses from specific demographics in social science experiments and public opinion surveys. However, there is a lack of established methods for evaluating the quality of these simulations. The paper introduces CoMPosT, a framework to characterize LLM simulations across four dimensions: Context, Model, Persona, and Topic. This framework is used to measure the susceptibility of open-ended LLM simulations to caricature, defined as individuation and exaggeration. The study finds that certain demographics (political and marginalized groups) and topics (general, uncontroversial) in GPT-4 simulations are highly susceptible to caricature.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 6,
+    "instruction": "Identify the key methodology and common research gaps in this paper.",
+    "input": "Evaluating Large Language Models (LLMs) for mental health support is challenging due to the emotionally and cognitively complex nature of therapeutic dialogue. Existing benchmarks are limited in scale, reliability, often relying on synthetic or social media data, and lack frameworks to assess when automated judges can be trusted. To address the need for large-scale dialogue datasets and judge reliability assessment, we introduce two benchmarks that provide a framework for generation and evaluation. MentalBench-100k consolidates 10,000 one-turn conversations from three real scenarios datasets, each paired with nine LLM-generated responses, yielding 100,000 response pairs. MentalAlign-70k}reframes evaluation by comparing four high-performing LLM judges with human experts across 70,000 ratings on seven attributes, grouped into Cognitive Support Score (CSS) and Affective Resonance Score (ARS). We then employ the Affective Cognitive Agreement Framework, a statistical methodology using intraclass correlation coefficients (ICC) with confidence intervals to quantify agreement, consistency, and bias between LLM judges and human experts. Our analysis reveals systematic inflation by LLM judges, strong reliability for cognitive attributes such as guidance and informativeness, reduced precision for empathy, and some unreliability in safety and relevance. Our contributions establish new methodological and empirical foundations for reliable, large-scale evaluation of LLMs in mental health. We release the benchmarks and codes at: https://github.com/abeerbadawi/MentalBench/",
+    "expected_fields": [
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "methods:\n- Introduction of two benchmarks for evaluating Large Language Models (LLMs) in mental health support.\n- MentalBench-100k: A dataset consisting of 100,000 response pairs from real scenarios and LLM-generated responses.\n- MentalAlign-70k: An evaluation method comparing four high-performing LLMs with human experts across 70,000 ratings on seven attributes.\n- Use of the Affective Cognitive Agreement Framework, a statistical methodology using intraclass correlation coefficients (ICC) with confidence intervals to quantify agreement, consistency, and bias between LLM judges and human experts.\ngaps:\n- Existing benchmarks are limited in scale, reliability, often relying on synthetic or social media data.\n- Lack of frameworks to assess when automated judges can be trusted.\n- Need for large-scale dialogue datasets and judge reliability assessment.",
+    "prediction_text": "methods:\n- Introduction of two benchmarks: MentalBench-100k and MentalAlign-70k\n- Consolidation of 10,000 one-turn conversations from three real scenarios datasets\n- Generation of nine LLM-generated responses for each conversation, yielding 100,000 response pairs\n- Comparison of four high-performing LLM judges with human experts across 70,000 ratings on seven attributes\n- Grouping of attributes into Cognitive Support Score (CSS) and Affective Resonance Score (ARS)\n- Employment of the Affective Cognitive Agreement Framework, a statistical methodology using intraclass correlation coefficients (ICC) with confidence intervals to quantify agreement, consistency, and bias between LLM judges and human experts\ngaps:\n- Existing benchmarks are limited in scale, reliability, often relying on synthetic or social media data, and lack frameworks to assess when automated judges can be trusted",
+    "schema_check": {
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 7,
+    "instruction": "Critically evaluate this research and its proposed methodology.",
+    "input": "Reinforcement learning has emerged as a powerful paradigm for post-training large language models (LLMs) to improve reasoning. Approaches like Reinforcement Learning from Human Feedback (RLHF) and Reinforcement Learning with Verifiable Rewards (RLVR) have shown strong results, but they require extensive external supervision. We investigate an alternative class of methods, Reinforcement Learning from Internal Feedback (RLIF), which relies solely on intrinsic model-derived signals instead of external rewards. In particular, we leverage unsupervised reward proxies such as token-level entropy, trajectory-level entropy, and self-certainty. Our theoretical analysis shows these internal objectives are partially equivalent, and we empirically evaluate various RLIF strategies on challenging math reasoning benchmarks. Experimental results demonstrate that RLIF can boost the reasoning performance of base LLMs at the beginning phase of the training, matching or surpassing RLVR techniques on these tasks. However, when training progresses, performance degrades even below the model before training. Moreover, we find that RLIF yields little improvement for instruction-tuned models, indicating diminishing returns of intrinsic feedback once an LLM is already instruction-tuned. We further analyze this limitation by mixing model weights and explain the reason of RLIF's training behaviors, providing practical guidelines for integrating internal feedback signals into LLM training. We hope our analysis of internal feedback will inform more principled and effective strategies for LLM post-training.",
+    "expected_fields": [
+      "evaluation",
+      "methods"
+    ],
+    "reference_text": "evaluation:\nThe experimental results demonstrate that Reinforcement Learning from Internal Feedback (RLIF) can boost the reasoning performance of base large language models (LLMs) at the beginning phase of the training. On challenging math reasoning benchmarks, RLIF matches or surpasses Reinforcement Learning with Verifiable Rewards (RLVR) techniques. However, as training progresses, the performance degrades even below the model before training. Furthermore, RLIF yields little improvement for instruction-tuned models, indicating diminishing returns of intrinsic feedback once an LLM is already instruction-tuned.\nmethods:\n- Reinforcement Learning from Human Feedback (RLHF)\n- Reinforcement Learning with Verifiable Rewards (RLVR)\n- Reinforcement Learning from Internal Feedback (RLIF)\n- Token-level entropy\n- Trajectory-level entropy\n- Self-certainty",
+    "prediction_text": "evaluation:\nThe experimental results demonstrate that Reinforcement Learning from Internal Feedback (RLIF) can boost the reasoning performance of base Large Language Models (LLMs) at the beginning phase of the training. RLIF matches or surpasses Reinforcement Learning with Verifiable Rewards (RLVR) techniques on challenging math reasoning benchmarks. However, when training progresses, performance degrades even below the model before training. Moreover, RLIF yields little improvement for instruction-tuned models, indicating diminishing returns of intrinsic feedback once an LLM is already instruction-tuned.\nmethods:\n- Reinforcement Learning from Internal Feedback (RLIF)\n- Token-level entropy\n- Trajectory-level entropy\n- Self-certainty\n- Unsupervised reward proxies",
+    "schema_check": {
+      "evaluation": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 8,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Many real world tasks where Large Language Models (LLMs) can be used require spatial reasoning, like Point of Interest (POI) recommendation and itinerary planning. However, on their own LLMs lack reliable spatial reasoning capabilities, especially about distances. To address this problem, we develop a novel approach, DistRAG, that enables an LLM to retrieve relevant spatial information not explicitly learned during training. Our method encodes the geodesic distances between cities and towns in a graph and retrieves a context subgraph relevant to the question. Using this technique, our method enables an LLM to answer distance-based reasoning questions that it otherwise cannot answer. Given the vast array of possible places an LLM could be asked about, DistRAG offers a flexible first step towards providing a rudimentary `world model' to complement the linguistic knowledge held in LLMs.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- The abstract introduces DistRAG, a novel approach designed to enhance Large Language Models (LLMs) in tasks requiring spatial reasoning such as Point of Interest recommendation and itinerary planning. The issue addressed is that LLMs lack reliable spatial capabilities, particularly regarding distances. DistRAG addresses this by encoding geodesic distances between cities and towns in a graph and retrieving relevant context subgraphs for questions. This enables LLMs to answer distance-based reasoning questions they couldn't before. The method offers a flexible first step towards providing a rudimentary 'world model' to complement the linguistic knowledge held in LLMs.",
+    "prediction_text": "summary:\n- The abstract discusses a novel approach, DistRAG, that enhances Large Language Models (LLMs) to handle spatial reasoning tasks such as Point of Interest (POI) recommendation and itinerary planning. The method encodes geodesic distances between cities and towns in a graph, retrieves a context subgraph relevant to the question, and enables the LLM to answer distance-based reasoning questions. This technique offers a flexible first step towards providing a rudimentary 'world model' to complement the linguistic knowledge held in LLMs.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 9,
+    "instruction": "Compare this method with traditional approaches in the field.",
+    "input": "Despite the impressive performance of large language models (LLMs) across various benchmarks, their ability to address ambiguously specified problems--frequent in real-world interactions--remains underexplored. To address this gap, we introduce a formal definition of task ambiguity and frame the problem of task disambiguation through the lens of Bayesian Experimental Design. By posing clarifying questions, LLM agents can acquire additional task specifications, progressively narrowing the space of viable solutions and reducing the risk of generating unsatisfactory outputs. Yet, generating effective clarifying questions requires LLM agents to engage in a form of meta-cognitive reasoning, an ability LLMs may presently lack. Our proposed approach of active task disambiguation enables LLM agents to generate targeted questions maximizing the information gain. Effectively, this approach shifts the load from implicit to explicit reasoning about the space of viable solutions. Empirical results demonstrate that this form of question selection leads to more effective task disambiguation in comparison to approaches relying on reasoning solely within the space of questions.",
+    "expected_fields": [
+      "comparison",
+      "summary"
+    ],
+    "reference_text": "comparison:\n- Our proposed approach of active task disambiguation is compared to approaches relying on reasoning solely within the space of questions.\n- The study found that this form of question selection leads to more effective task disambiguation compared to traditional methods.\nsummary:\nThe research introduces a formal definition of task ambiguity and proposes an approach using Bayesian Experimental Design for task disambiguation in large language models. By posing clarifying questions, the LLM agents can acquire additional task specifications, reducing the risk of generating unsatisfactory outputs. However, generating effective clarifying questions requires the LLMs to engage in meta-cognitive reasoning, an ability they may lack currently. The empirical results demonstrate that this approach leads to more effective task disambiguation compared to traditional methods.",
+    "prediction_text": "comparison:\n- The proposed approach of active task disambiguation leads to more effective task disambiguation in comparison to approaches relying on reasoning solely within the space of questions.\nsummary:\n- The abstract discusses the challenge of ambiguous problem-solving in large language models (LLMs), which is under-explored despite their impressive performance. To address this, a formal definition of task ambiguity is introduced, and the problem is framed through Bayesian Experimental Design. LLM agents are proposed to clarify tasks by generating targeted questions that maximize information gain, shifting the load from implicit to explicit reasoning about the space of viable solutions. Empirical results demonstrate the effectiveness of this question selection approach.",
+    "schema_check": {
+      "comparison": true,
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 10,
+    "instruction": "Find contradictions in this research and identify its methodology.",
+    "input": "Using large language models (LLMs) to evaluate text quality has recently gained popularity. Some prior works explore the idea of using LLMs for evaluation, while they differ in some details of the evaluation process. In this paper, we analyze LLM evaluation (Chiang and Lee, 2023) and G-Eval (Liu et al., 2023), and we discuss how those details in the evaluation process change how well the ratings given by LLMs correlate with human ratings. We find that the auto Chain-of-Thought (CoT) used in G-Eval does not always make G-Eval more aligned with human ratings. We also show that forcing the LLM to output only a numeric rating, as in G-Eval, is suboptimal. Last, we reveal that asking the LLM to explain its own ratings consistently improves the correlation between the ChatGPT and human ratings and pushes state-of-the-art (SoTA) correlations on two meta-evaluation datasets.",
+    "expected_fields": [
+      "contradictions",
+      "methods"
+    ],
+    "reference_text": "contradictions:\nThe paper mentions that using the auto Chain-of-Thought (CoT) in G-Eval does not always make G-Eval more aligned with human ratings, suggesting potential contradictions between the expectations and performance of the CoT approach.\nmethods:\n- Analysis of LLM evaluation as presented in Chiang and Lee (2023) and G-Eval by Liu et al. (2023)\n- Exploration of how details in the evaluation process affect the correlation between LLM ratings and human ratings\n- Demonstration that forcing the LLM to output only a numeric rating, as in G-Eval, is suboptimal\n- Discovery that asking the LLM to explain its own ratings consistently improves the correlation between ChatGPT and human ratings",
+    "prediction_text": "contradictions:\n- The auto Chain-of-Thought (CoT) used in G-Eval does not always make G-Eval more aligned with human ratings.\n- Forcing the LLM to output only a numeric rating, as in G-Eval, is suboptimal.\nmethods:\n- LLM evaluation (Chiang and Lee, 2023)\n- G-Eval (Liu et al., 2023)",
+    "schema_check": {
+      "contradictions": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 11,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "Supervised fine-tuning (SFT) is a critical step in aligning large language models (LLMs) with human instructions and values, yet many aspects of SFT remain poorly understood. We trained a wide range of base models on a variety of datasets including code generation, mathematical reasoning, and general-domain tasks, resulting in 1,000+ SFT models under controlled conditions. We then identified the dataset properties that matter most and examined the layer-wise modifications introduced by SFT. Our findings reveal that some training-task synergies persist across all models while others vary substantially, emphasizing the importance of model-specific strategies. Moreover, we demonstrate that perplexity consistently predicts SFT effectiveness, often surpassing superficial similarity between the training data and the benchmark, and that mid-layer weight changes correlate most strongly with performance gains. We release these 1,000+ SFT models and benchmark results to accelerate further research. All resources are available at https://github.com/llm-jp/massive-sft.",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The paper does not explicitly mention any identified gaps in the understanding of supervised fine-tuning (SFT) for large language models (LLMs).\ncontradictions:",
+    "prediction_text": "gaps:\n- The abstract does not specify which specific gaps were identified in the study.\ncontradictions:",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 12,
+    "instruction": "Compare this method with traditional approaches in the field.",
+    "input": "We examine how large language models (LLMs) interpret historical stock returns and compare their forecasts with estimates from a crowd-sourced platform for ranking stocks. While stock returns exhibit short-term reversals, LLM forecasts over-extrapolate, placing excessive weight on recent performance similar to humans. LLM forecasts appear optimistic relative to historical and future realized returns. When prompted for 80% confidence interval predictions, LLM responses are better calibrated than survey evidence but are pessimistic about outliers, leading to skewed forecast distributions. The findings suggest LLMs manifest common behavioral biases when forecasting expected returns but are better at gauging risks than humans.",
+    "expected_fields": [
+      "comparison",
+      "summary"
+    ],
+    "reference_text": "comparison:\n- Large language models (LLMs) are compared with estimates from a crowd-sourced platform for ranking stocks.\nsummary:\n- The abstract discusses that large language models tend to over-extrapolate short-term trends in stock returns, similar to human behavior. Their forecasts are optimistic but better calibrated than survey evidence when it comes to confidence intervals. However, they underestimate outlier events, leading to skewed forecast distributions. The research suggests that while LLMs show common behavioral biases in forecasting expected returns, they might be more effective at gauging risks compared to humans.",
+    "prediction_text": "comparison:\n- The study compares the interpretations and forecasts of large language models (LLMs) with estimates from a crowd-sourced platform for ranking stocks.\nsummary:\n- The research finds that LLMs over-extrapolate historical stock returns, similar to human behavior. However, they are more calibrated when prompted for 80% confidence interval predictions compared to survey evidence. Despite this, LLM forecasts are optimistic relative to historical and future realized returns. The study also notes that LLMs are better at gauging risks than humans, but they are pessimistic about outliers, leading to skewed forecast distributions.",
+    "schema_check": {
+      "comparison": true,
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 13,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "The integration of Large Language Models (LLMs), such as ChatGPT and GitHub Copilot, into software engineering workflows has shown potential to enhance productivity, particularly in software testing. This paper investigates whether LLM support improves defect detection effectiveness during unit testing. Building on prior studies comparing manual and tool-supported testing, we replicated and extended an experiment where participants wrote unit tests for a Java-based system with seeded defects within a time-boxed session, supported by LLMs. Comparing LLM supported and manual testing, results show that LLM support significantly increases the number of unit tests generated, defect detection rates, and overall testing efficiency. These findings highlight the potential of LLMs to improve testing and defect detection outcomes, providing empirical insights into their practical application in software testing.",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The paper does not discuss the types or complexity of defects that were seeded in the Java-based system.\n- There is no information provided about the experience level of the participants involved in the experiment.\n- The paper does not mention how the LLM support was implemented for the participants during unit testing.\ncontradictions:",
+    "prediction_text": "gaps:\n- The paper does not provide information about the specific LLM used in the experiment.\n- It is unclear whether the study compared different LLMs or just one.\ncontradictions:",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 14,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Passive tracking methods, such as phone and wearable sensing, have become dominant in monitoring human behaviors in modern ubiquitous computing studies. While there have been significant advances in machine-learning approaches to translate periods of raw sensor data to model momentary behaviors, (e.g., physical activity recognition), there still remains a significant gap in the translation of these sensing streams into meaningful, high-level, context-aware insights that are required for various applications (e.g., summarizing an individual's daily routine). To bridge this gap, experts often need to employ a context-driven sensemaking process in real-world studies to derive insights. This process often requires manual effort and can be challenging even for experienced researchers due to the complexity of human behaviors.   We conducted three rounds of user studies with 21 experts to explore solutions to address challenges with sensemaking. We follow a human-centered design process to identify needs and design, iterate, build, and evaluate Vital Insight (VI), a novel, LLM-assisted, prototype system to enable human-in-the-loop inference (sensemaking) and visualizations of multi-modal passive sensing data from smartphones and wearables. Using the prototype as a technology probe, we observe experts' interactions with it and develop an expert sensemaking model that explains how experts move between direct data representations and AI-supported inferences to explore, question, and validate insights. Through this iterative process, we also synthesize and discuss a list of design implications for the design of future AI-augmented visualization systems to better assist experts' sensemaking processes in multi-modal health sensing data.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- The abstract discusses the use of passive tracking methods like phones and wearables for monitoring human behaviors in ubiquitous computing studies. While there have been advancements in machine-learning approaches to interpret raw sensor data, a gap remains in translating these into meaningful, high-level, context-aware insights. To bridge this gap, a user study was conducted with 21 experts to explore solutions for the challenging sensemaking process. A prototype system named Vital Insight (VI) was developed using a human-centered design process to aid human-in-the-loop inference and visualizations of multi-modal passive sensing data from smartphones and wearables. The study observes experts' interactions with VI and develops an expert sensemaking model, identifying how they move between direct data representations and AI-supported inferences to explore, question, and validate insights. Design implications for future AI-augmented visualization systems are also synthesized and discussed.",
+    "prediction_text": "summary:\n- The abstract discusses the development of Vital Insight (VI), a novel, LLM-assisted prototype system designed to aid experts in the sensemaking process of multi-modal passive sensing data from smartphones and wearables. The system aims to bridge the gap between raw sensor data and meaningful, context-aware insights required for various applications. The research involved three rounds of user studies with 21 experts, following a human-centered design process. The study observes experts' interactions with the prototype and develops an expert sensemaking model. The iterative process also synthesizes design implications for future AI-augmented visualization systems to better assist experts' sensemaking processes in multi-modal health sensing data.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 15,
+    "instruction": "Give me a technical breakdown of this paper.",
+    "input": "Large Language Models (LLMs) excel in diverse applications including generation of code snippets, but often struggle with generating code for complex Machine Learning (ML) tasks. Although existing LLM single-agent based systems give varying performance depending on the task complexity, they purely rely on larger and expensive models such as GPT-4. Our investigation reveals that no-cost and low-cost models such as Gemini-Pro, Mixtral and CodeLlama perform far worse than GPT-4 in a single-agent setting. With the motivation of developing a cost-efficient LLM based solution for solving ML tasks, we propose an LLM Multi-Agent based system which leverages combination of experts using profiling, efficient retrieval of past observations, LLM cascades, and ask-the-expert calls. Through empirical analysis on ML engineering tasks in the MLAgentBench benchmark, we demonstrate the effectiveness of our system, using no-cost models, namely Gemini as the base LLM, paired with GPT-4 in cascade and expert to serve occasional ask-the-expert calls for planning. With 94.2\\% reduction in the cost (from \\$0.931 per run cost averaged over all tasks for GPT-4 single agent system to \\$0.054), our system is able to yield better average success rate of 32.95\\% as compared to GPT-4 single-agent system yielding 22.72\\% success rate averaged over all the tasks of MLAgentBench.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps",
+      "evaluation"
+    ],
+    "reference_text": "summary:\n- The abstract discusses a proposal for a cost-efficient Large Language Model (LLM) Multi-Agent based system to address the challenge of generating code for complex Machine Learning (ML) tasks. The new system leverages combination of experts using profiling, efficient retrieval of past observations, LLM cascades, and ask-the-expert calls.\nmethods:\n- Proposed LLM Multi-Agent system uses Gemini as the base LLM with GPT-4 in cascade and expert for occasional ask-the-expert calls.\n- Combination of experts using profiling, efficient retrieval of past observations, LLM cascades, and ask-the-expert calls.\ngaps:\n- The abstract mentions that no-cost and low-cost models such as Gemini-Pro, Mixtral, and CodeLlama perform far worse than GPT-4 in a single-agent setting.\nevaluation:\n- Empirical analysis on ML engineering tasks in the MLAgentBench benchmark demonstrates the effectiveness of the system.\n- With 94.2% reduction in cost, the system is able to yield better average success rate of 32.95% as compared to GPT-4 single-agent system with 22.72% success rate.",
+    "prediction_text": "summary:\n- The abstract discusses a study on the use of Large Language Models (LLMs) for complex Machine Learning (ML) tasks. It highlights that existing single-agent based systems using models like GPT-4 perform poorly with no-cost and low-cost models such as Gemini-Pro, Mixtral, and CodeLlama.\n- The motivation is to develop a cost-efficient LLM based solution for solving ML tasks.\nmethods:\n- Proposal of an LLM Multi-Agent based system which leverages combination of experts using profiling, efficient retrieval of past observations, LLM cascades, and ask-the-expert calls.\n- Use of no-cost models, namely Gemini as the base LLM, paired with GPT-4 in cascade and expert to serve occasional ask-the-expert calls for planning.\ngaps:\n- The study reveals that no-cost and low-cost models such as Gemini-Pro, Mixtral, and CodeLlama perform far worse than GPT-4 in a single-agent setting.\nevaluation:\n- Empirical analysis on ML engineering tasks in the MLAgentBench benchmark demonstrates the effectiveness of the proposed system.\n- The system is able to yield better average success rate of 32.95% as compared to GPT-4 single-agent system yielding 22.72% success rate averaged over all the tasks of MLAgentBench.\n- With a significant cost reduction of 94.2%, the system costs an average of \\$0.054 per run compared to \\$0.931 per run cost averaged over all tasks for GPT-4 single agent system.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true,
+      "evaluation": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 16,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "The fine-tuning of pre-trained large language models (LLMs) using reinforcement learning (RL) is generally formulated as direct policy optimization. This approach was naturally favored as it efficiently improves a pretrained LLM, seen as an initial policy. Another RL paradigm, Q-learning methods, has received far less attention in the LLM community while demonstrating major success in various non-LLM RL tasks. In particular, Q-learning effectiveness comes from its sample efficiency and ability to learn offline, which is particularly valuable given the high computational cost of sampling with LLMs. However, naively applying a Q-learning-style update to the model's logits is ineffective due to the specificity of LLMs. Our core contribution is to derive theoretically grounded loss functions from Bellman equations to adapt Q-learning methods to LLMs. To do so, we carefully adapt insights from the RL literature to account for LLM-specific characteristics, ensuring that the logits become reliable Q-value estimates. We then use this loss to build a practical algorithm, ShiQ for Shifted-Q, that supports off-policy, token-wise learning while remaining simple to implement. Finally, we evaluate ShiQ on both synthetic data and real-world benchmarks, e.g., UltraFeedback and BFCL-V3, demonstrating its effectiveness in both single-turn and multi-turn LLM settings",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The paper focuses on adapting Q-learning methods to Large Language Models (LLMs), which has received less attention in the LLM community. However, it does not specify what specific tasks or domains these methods have been successful in outside of LLMs.\ncontradictions:",
+    "prediction_text": "gaps:\n- The abstract does not specify the exact nature of the 'high computational cost' associated with sampling with LLMs.\n- It is unclear whether the proposed ShiQ algorithm has been tested on a diverse range of LLMs beyond those mentioned in the abstract.\ncontradictions:",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 17,
+    "instruction": "Compare this method with traditional approaches in the field.",
+    "input": "This paper presents Audio-Visual LLM, a Multimodal Large Language Model that takes both visual and auditory inputs for holistic video understanding. A key design is the modality-augmented training, which involves the integration of modality-specific tokens engineered to activate the appropriate visual and/or auditory encoder selectively. This mechanism is pivotal in enabling end-to-end joint training with video data at different modalities, including visual-only, audio-only, and audio-visual formats. Moreover, we introduce a high-quality video instruction dataset, derived from GPT-4. This dataset allows Audio-Visual LLM to adeptly process a variety of task-oriented video instructions, ranging from multi-turn conversations and audio-visual narratives to complex reasoning tasks. Extensive experiments demonstrate that Audio-Visual LLM impressively achieves strong zero-shot results across a range of video understanding tasks. For example, Audio-Visual LLM achieves an accuracy of 53.7% on MSRVTT-QA, outperforming non-LLM-based InterVideo by 6.6% and LLM-based Valley by 4.4%, respectively. Additionally, our Audio-Visual LLM also achieves competitive performance on audio tasks (e.g., AudioCaps).",
+    "expected_fields": [
+      "comparison",
+      "summary"
+    ],
+    "reference_text": "comparison:\n- Audio-Visual LLM achieves an accuracy of 53.7% on MSRVTT-QA, outperforming non-LLM-based InterVideo by 6.6%. It also outperforms LLM-based Valley by 4.4%.\nsummary:\n- The paper introduces Audio-Visual LLM, a multimodal large language model that takes both visual and auditory inputs for holistic video understanding. The model uses modality-augmented training, allowing end-to-end joint training with various video data formats. A high-quality video instruction dataset derived from GPT-4 is introduced, enabling Audio-Visual LLM to process a variety of task-oriented video instructions. Extensive experiments demonstrate strong zero-shot results across multiple video understanding tasks, including competitive performance on audio tasks.",
+    "prediction_text": "comparison:\n- Audio-Visual LLM achieves an accuracy of 53.7% on MSRVTT-QA, outperforming non-LLM-based InterVideo by 6.6% and LLM-based Valley by 4.4%, respectively.\nsummary:\n- The paper introduces Audio-Visual LLM, a multimodal large language model that takes both visual and auditory inputs for holistic video understanding. The model undergoes modality-augmented training, which integrates modality-specific tokens to activate the appropriate encoder selectively. This enables end-to-end joint training with video data at different modalities. A high-quality video instruction dataset derived from GPT-4 is also introduced, allowing Audio-Visual LLM to process various task-oriented video instructions. Extensive experiments demonstrate strong zero-shot results across various video understanding tasks, including MSRVTT-QA, where Audio-Visual LLM achieves an accuracy of 53.7%. The model also performs competitively on audio tasks such as AudioCaps.",
+    "schema_check": {
+      "comparison": true,
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 18,
+    "instruction": "Give me a technical breakdown of this paper.",
+    "input": "Padding tokens are widely used in large language models (LLMs) to equalize sequence lengths during batched inference. While they should be fully masked, implementation errors can cause them to influence computation, and the extent of this influence is not well understood. We systematically study this effect across three open-source model families (Llama, Gemma, Qwen), inserting controlled amounts of padding and evaluating outcomes along four axes: activations, generation quality, bias, and safety. Even small amounts of padding shift hidden representations, degrade quality in smaller models, alter bias in unpredictable ways, and weaken safety guardrails. These findings demonstrate that padding is not a harmless detail but a robustness risk that must be carefully handled in deployment.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps",
+      "evaluation"
+    ],
+    "reference_text": "summary:\n- Padding tokens in large language models (LLMs) can influence computation due to implementation errors, despite being intended to be fully masked. The study investigates this effect across three open-source model families (Llama, Gemma, Qwen), examining the impact of controlled amounts of padding on activations, generation quality, bias, and safety.\nmethods:\n- Inserting controlled amounts of padding in various models\n- Evaluating outcomes along four axes: activations, generation quality, bias, and safety\ngaps:\n- The study does not provide specific details about the implementation errors that cause padding to influence computation\nevaluation:\n- Small amounts of padding shift hidden representations\n- Degrade quality in smaller models\n- Alter bias in unpredictable ways\n- Weaken safety guardrails",
+    "prediction_text": "summary:\n- The abstract discusses the impact of padding tokens in large language models (LLMs) during batched inference. Despite being intended to be fully masked, implementation errors can cause them to influence computation. The study investigates this effect across three open-source model families (Llama, Gemma, Qwen) by inserting controlled amounts of padding and evaluating outcomes along four axes: activations, generation quality, bias, and safety.\n- The findings reveal that even small amounts of padding shift hidden representations, degrade quality in smaller models, alter bias in unpredictable ways, and weaken safety guardrails.\nmethods:\n- The study investigates the effect of padding tokens by inserting controlled amounts of padding into three open-source model families (Llama, Gemma, Qwen).\n- The outcomes are evaluated along four axes: activations, generation quality, bias, and safety.\ngaps:\n- The extent to which padding influences computation and the specific ways it alters bias and safety guardrails are not well understood.\nevaluation:\n- The study finds that even small amounts of padding shift hidden representations, degrade quality in smaller models, alter bias in unpredictable ways, and weaken safety guardrails.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true,
+      "evaluation": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 19,
+    "instruction": "Identify the key methodology and common research gaps in this paper.",
+    "input": "Large language models (LLMs) are popular for high-quality text generation but can produce harmful content, even when aligned with human values through reinforcement learning. Adversarial prompts can bypass their safety measures. We propose LLM Self Defense, a simple approach to defend against these attacks by having an LLM screen the induced responses. Our method does not require any fine-tuning, input preprocessing, or iterative output generation. Instead, we incorporate the generated content into a pre-defined prompt and employ another instance of an LLM to analyze the text and predict whether it is harmful. We test LLM Self Defense on GPT 3.5 and Llama 2, two of the current most prominent LLMs against various types of attacks, such as forcefully inducing affirmative responses to prompts and prompt engineering attacks. Notably, LLM Self Defense succeeds in reducing the attack success rate to virtually 0 using both GPT 3.5 and Llama 2. The code is publicly available at https://github.com/poloclub/llm-self-defense",
+    "expected_fields": [
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "methods:\n- LLM Self Defense: A simple approach to defend against harmful content produced by large language models (LLMs). The method involves having an LLM screen the induced responses. It analyzes the generated content, incorporates it into a pre-defined prompt, and employs another instance of an LLM to analyze the text and predict whether it is harmful.\n- The system does not require any fine-tuning, input preprocessing, or iterative output generation.\ngaps:\n- While the proposed method successfully reduces the attack success rate to virtually 0 using both GPT 3.5 and Llama 2, it is not clear from the abstract if there are any limitations or potential weaknesses in the approach that could be exploited under certain conditions.",
+    "prediction_text": "methods:\n- LLM Self Defense\n- Incorporating generated content into a pre-defined prompt\n- Employing another instance of an LLM to analyze the text and predict whether it is harmful\ngaps:\n- The abstract does not specify the exact nature or number of attacks tested beyond 'various types of attacks'.\n- It is unclear how the 'pre-defined prompt' is constructed.\n- The abstract does not provide details about the evaluation metrics used to measure the success rate of LLM Self Defense.",
+    "schema_check": {
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 20,
+    "instruction": "Compare this method with traditional approaches in the field.",
+    "input": "In this work, from a theoretical lens, we aim to understand why large language model (LLM) empowered agents are able to solve decision-making problems in the physical world. To this end, consider a hierarchical reinforcement learning (RL) model where the LLM Planner and the Actor perform high-level task planning and low-level execution, respectively. Under this model, the LLM Planner navigates a partially observable Markov decision process (POMDP) by iteratively generating language-based subgoals via prompting. Under proper assumptions on the pretraining data, we prove that the pretrained LLM Planner effectively performs Bayesian aggregated imitation learning (BAIL) through in-context learning. Additionally, we highlight the necessity for exploration beyond the subgoals derived from BAIL by proving that naively executing the subgoals returned by LLM leads to a linear regret. As a remedy, we introduce an $ε$-greedy exploration strategy to BAIL, which is proven to incur sublinear regret when the pretraining error is small. Finally, we extend our theoretical framework to include scenarios where the LLM Planner serves as a world model for inferring the transition model of the environment and to multi-agent settings, enabling coordination among multiple Actors.",
+    "expected_fields": [
+      "comparison",
+      "summary"
+    ],
+    "reference_text": "comparison:\n- The authors compare the performance of large language models (LLMs) in decision-making problems in the physical world to Bayesian aggregated imitation learning (BAIL). They highlight that naively executing subgoals returned by LLM leads to a linear regret, while an $ε$-greedy exploration strategy to BAIL results in sublinear regret when the pretraining error is small.\nsummary:\n- In this work, the authors propose a hierarchical reinforcement learning model where a large language model (LLM) Planner and an Actor perform high-level task planning and low-level execution respectively. The LLM Planner navigates a partially observable Markov decision process (POMDP) by iteratively generating subgoals via prompting. Under certain assumptions, the pretrained LLM Planner is proved to effectively perform Bayesian aggregated imitation learning (BAIL). However, naively executing the subgoals leads to a linear regret, which they mitigate with an $ε$-greedy exploration strategy. The authors also extend their framework to scenarios where the LLM Planner serves as a world model for inferring the transition model of the environment and to multi-agent settings.",
+    "prediction_text": "comparison:\n- The work compares the performance of a large language model (LLM) empowered agent to a hierarchical reinforcement learning (RL) model, where the LLM Planner and the Actor perform high-level task planning and low-level execution, respectively.\nsummary:\n- In this study, the authors aim to understand why large language model (LLM) empowered agents can solve decision-making problems in the physical world. They propose a hierarchical RL model with an LLM Planner and an Actor. Under this model, the LLM Planner navigates a partially observable Markov decision process (POMDP) by iteratively generating language-based subgoals via prompting. The authors prove that the pretrained LLM Planner effectively performs Bayesian aggregated imitation learning (BAIL) through in-context learning. However, they also highlight the necessity for exploration beyond the subgoals derived from BAIL due to a linear regret. To address this, they introduce an $ε$-greedy exploration strategy to BAIL, which is proven to incur sublinear regret when the pretraining error is small. The theoretical framework is then extended to include scenarios where the LLM Planner serves as a world model for inferring the transition model of the environment and to multi-agent settings, enabling coordination among multiple Actors.",
+    "schema_check": {
+      "comparison": true,
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 21,
+    "instruction": "Extract a summary, methods, and gaps for this research paper.",
+    "input": "Training large language models (LLMs) imposes extreme demands on computation, memory capacity, and interconnect bandwidth, driven by their ever-increasing parameter scales and intensive data movement. Wafer-scale integration offers a promising solution by densely integrating multiple single-die chips with high-speed die-to-die (D2D) interconnects. However, the limited wafer area necessitates trade-offs among compute, memory, and communication resources. Fully harnessing the potential of wafer-scale integration while mitigating its architectural constraints is essential for maximizing LLM training performance. This imposes significant challenges for the co-optimization of architecture and training strategies. Unfortunately, existing approaches all fall short in addressing these challenges.   To bridge the gap, we propose WATOS, a co-exploration framework for LLM training strategy and wafer-scale architecture. We first define a highly configurable hardware template designed to explore optimal architectural parameters for wafer-scale chips. Based on it, we capitalize on the high D2D bandwidth and fine-grained operation advantages inherent to wafer-scale chips to explore optimal parallelism and resource allocation strategies, effectively addressing the memory underutilization issues during LLM training. Compared to the state-of-the-art (SOTA) LLM training framework Megatron and Cerebras' weight streaming wafer training strategy, WATOS can achieve an average overall throughput improvement of 2.74x and 1.53x across various LLM models, respectively. In addition, we leverage WATOS to reveal intriguing insights about wafer-scale architecture design with the training of LLM workloads.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "summary:\n- The abstract discusses the challenges in training large language models (LLMs) due to increasing parameter scales and data movement demands. It introduces Wafer-scale integration as a potential solution, but highlights the need for optimizing its architecture and training strategies to fully leverage its benefits while mitigating constraints.\n- The proposed framework, WATOS, aims to co-explore LLM training strategies and wafer-scale architectures. It presents a highly configurable hardware template to explore optimal architectural parameters for wafer-scale chips and utilizes the high die-to-die (D2D) bandwidth and fine-grained operation advantages of wafer-scale chips to address memory underutilization issues during LLM training.\n- WATOS is compared with the state-of-the-art (SOTA) LLM training framework Megatron and Cerebras' weight streaming wafer training strategy. Results show that WATOS achieves an average overall throughput improvement of 2.74x and 1.53x across various LLM models respectively.\nmethods:\n- Defining a highly configurable hardware template for exploring optimal architectural parameters\n- Exploring parallelism and resource allocation strategies based on the high D2D bandwidth of wafer-scale chips\n- Addressing memory underutilization issues during LLM training\ngaps:\n- Existing approaches are unable to fully address the challenges in co-optimizing architecture and training strategies for LLM training on wafer-scale integration.",
+    "prediction_text": "summary:\n- The abstract discusses WATOS, a co-exploration framework for optimizing large language model (LLM) training strategy and wafer-scale architecture. The goal is to maximize LLM training performance while addressing the challenges posed by wafer-scale integration's limited resources.\n- WATOS proposes a hardware template for exploring optimal architectural parameters for wafer-scale chips. It leverages the high D2D bandwidth and fine-grained operation advantages of wafer-scale chips to explore parallelism and resource allocation strategies, mitigating memory underutilization issues during LLM training.\nmethods:\n- Defining a highly configurable hardware template for exploring optimal architectural parameters for wafer-scale chips.\n- Capitalizing on the high D2D bandwidth and fine-grained operation advantages inherent to wafer-scale chips to explore optimal parallelism and resource allocation strategies.\n- Addressing memory underutilization issues during LLM training.\ngaps:\n- Existing approaches fall short in addressing the challenges of co-optimizing architecture and training strategies for LLM training in wafer-scale integration.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 22,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "Information removal or suppression in large language models (LLMs) is a desired functionality, useful in AI regulation, legal compliance, safety, and privacy. LLM unlearning methods aim to remove information on demand from LLMs. Current LLM unlearning methods struggle to balance the unlearning efficacy and utility due to the competing nature of these objectives. Keeping the unlearning process computationally feasible without assuming access to the model weights is an overlooked area. In this work we show that \\textit{agents might be all we need for effective and practical inference-time LLM unlearning}. We present the first agentic LLM unlearning (\\texttt{ALU}) method, a multi-agent, retrain-free, model-agnostic approach to LLM unlearning that achieves effective unlearning while preserving the utility. Our \\texttt{ALU} framework unlearns by involving multiple LLM agents, each designed for a specific step in the unlearning process, without the need to update model weights for any of the agents in the framework. Users can easily request any set of unlearning instances in any sequence, and \\texttt{ALU} seamlessly adapts in real time. This is facilitated without requiring any changes in the underlying LLM model. Through extensive experiments on established benchmarks (TOFU, WMDP, WPU) and jailbreaking techniques (many shot, target masking, other languages), we demonstrate that \\texttt{ALU} consistently stands out as the most robust inference-time LLM unlearning framework among current state-of-the-art methods while incurring time cost that remains effectively constant regardless of the number of unlearning targets. We further highlight \\texttt{ALU}'s superior performance compared to existing methods when evaluated at scale. Specifically, \\texttt{ALU} is assessed on up to 1000 unlearning targets, exceeding the evaluation scope of all previously proposed LLM unlearning methods.",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The abstract does not specify the exact nature of the 'agents' used in the exttt{ALU} method.\n- It is unclear how the exttt{ALU} framework ensures that the unlearning process does not affect the utility of the LLM beyond what is necessary for each specific unlearning instance.\n- The abstract does not provide details on how the exttt{ALU} framework adapts to handle unlearning requests in a way that maintains the coherence and consistency of the remaining information in the LLM.\ncontradictions:",
+    "prediction_text": "gaps:\n- The abstract does not specify the exact nature of the 'agents' used in the agentic LLM unlearning (ALU) method.\n- It is unclear how the ALU method handles cases where the unlearning targets are not explicitly provided by the user.\ncontradictions:",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 23,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Large language models (LLMs) have achieved remarkable success across various natural language processing (NLP) tasks. However, recent studies suggest that they still face challenges in performing fundamental NLP tasks essential for deep language understanding, particularly syntactic parsing. In this paper, we conduct an in-depth analysis of LLM parsing capabilities, delving into the specific shortcomings of their parsing results. We find that LLMs may stem from limitations to fully leverage grammar rules in existing treebanks, which restricts their capability to generate valid syntactic structures. To help LLMs acquire knowledge without additional training, we propose a self-correction method that leverages grammar rules from existing treebanks to guide LLMs in correcting previous errors. Specifically, we automatically detect potential errors and dynamically search for relevant rules, offering hints and examples to guide LLMs in making corrections themselves. Experimental results on three datasets with various LLMs, demonstrate that our method significantly improves performance in both in-domain and cross-domain settings on the English and Chinese datasets.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- This paper analyzes the parsing capabilities of large language models (LLMs) in natural language processing tasks, identifying shortcomings in syntactic parsing. The study suggests that LLMs struggle to fully leverage grammar rules in existing treebanks for generating valid syntactic structures. A self-correction method is proposed using grammar rules from these treebanks to guide LLMs in correcting errors without additional training. Experimental results demonstrate improved performance in both in-domain and cross-domain settings on English and Chinese datasets.",
+    "prediction_text": "summary:\n- This paper analyzes the parsing capabilities of large language models (LLMs) and finds that they struggle with fundamental natural language processing tasks, particularly syntactic parsing. The authors suggest this may be due to LLMs' inability to fully utilize grammar rules in existing treebanks, limiting their ability to generate valid syntactic structures. To address this, they propose a self-correction method that uses grammar rules from existing treebanks to guide LLMs in correcting previous errors. The method involves automatically detecting potential errors, dynamically searching for relevant rules, and offering hints and examples to guide LLMs in making corrections themselves. Experimental results show significant improvements in both in-domain and cross-domain settings on English and Chinese datasets.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 24,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "We transitioned our post-CS1 course that introduces various subfields of computer science so that it integrates Large Language Models (LLMs) in a structured, critical, and practical manner. It aims to help students develop the skills needed to engage meaningfully and responsibly with AI. The course now includes explicit instruction on how LLMs work, exposure to current tools, ethical issues, and activities that encourage student reflection on personal use of LLMs as well as the larger evolving landscape of AI-assisted programming. In class, we demonstrate the use and verification of LLM outputs, guide students in the use of LLMs as an ingredient in a larger problem-solving loop, and require students to disclose and acknowledge the nature and extent of LLM assistance. Throughout the course, we discuss risks and benefits of LLMs across CS subfields. In our first iteration of the course, we collected and analyzed data from students pre and post surveys. Student understanding of how LLMs work became more technical, and their verification and use of LLMs shifted to be more discerning and collaborative. These strategies can be used in other courses to prepare students for the AI-integrated future.",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The abstract does not provide information on the specific Large Language Models (LLMs) used in the course.\n- There is no mention of any assessments or evaluations to measure the effectiveness of the teaching methods and strategies implemented.\ncontradictions:",
+    "prediction_text": "gaps:\n- The abstract does not provide specific details about the data collected from students pre and post surveys.\n- It is unclear how the course addresses the potential biases or limitations of Large Language Models (LLMs).\ncontradictions:",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 25,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Decision-making agents based on pre-trained Large Language Models (LLMs) are increasingly being deployed across various domains of human activity. While their applications are currently rather specialized, several research efforts are underway to develop more generalist agents. As LLM-based systems become more agentic, their influence on human activity will grow and their transparency will decrease. Consequently, developing effective methods for aligning them to human values is vital.   The prevailing practice in alignment often relies on human preference data (e.g., in RLHF or DPO), in which values are implicit, opaque and are essentially deduced from relative preferences over different model outputs. In this work, instead of relying on human feedback, we introduce the design of reward functions that explicitly and transparently encode core human values for Reinforcement Learning-based fine-tuning of foundation agent models. Specifically, we use intrinsic rewards for the moral alignment of LLM agents.   We evaluate our approach using the traditional philosophical frameworks of Deontological Ethics and Utilitarianism, quantifying moral rewards for agents in terms of actions and consequences on the Iterated Prisoner's Dilemma (IPD) environment. We also show how moral fine-tuning can be deployed to enable an agent to unlearn a previously developed selfish strategy. Finally, we find that certain moral strategies learned on the IPD game generalize to several other matrix game environments. In summary, we demonstrate that fine-tuning with intrinsic rewards is a promising general solution for aligning LLM agents to human values, and it might represent a more transparent and cost-effective alternative to currently predominant alignment techniques.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- This work proposes a method to align Large Language Model (LLM) agents with human values using intrinsic rewards for Reinforcement Learning. The approach is evaluated using Deontological Ethics and Utilitarianism in the Iterated Prisoner's Dilemma (IPD) environment. Moral fine-tuning enables an agent to unlearn a selfish strategy, and some strategies learned on IPD generalize to other matrix game environments. The study suggests that fine-tuning with intrinsic rewards could be a promising general solution for aligning LLM agents, offering a more transparent and cost-effective alternative to existing alignment techniques.",
+    "prediction_text": "summary:\n- The abstract discusses the development of decision-making agents based on Large Language Models (LLMs) for various human activities. It highlights the need to align these agents with human values as they become more agentic and influential. The prevailing practice relies on human preference data, but this work introduces the design of reward functions that explicitly encode core human values for Reinforcement Learning-based fine-tuning of foundation agent models. The approach uses intrinsic rewards for moral alignment, quantifying moral rewards through actions and consequences in the Iterated Prisoner's Dilemma (IPD) environment. The study also demonstrates how moral fine-tuning can enable an agent to unlearn a previously developed selfish strategy and shows that certain moral strategies learned on the IPD game generalize to several other matrix game environments. In summary, the work presents fine-tuning with intrinsic rewards as a promising general solution for aligning LLM agents to human values, potentially offering a more transparent and cost-effective alternative to current alignment techniques.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 26,
+    "instruction": "Identify the key methodology and common research gaps in this paper.",
+    "input": "Controlling undesirable Large Language Model (LLM) behaviors, such as the generation of unsafe content or failing to adhere to safety guidelines, often relies on costly fine-tuning. Activation steering provides an alternative for inference-time control, but existing methods typically lack fine-grained, adaptive mechanisms. We introduce a novel approach using a lightweight, trainable controller network integrated during inference. This controller network observes specific intermediate LLM activations and predicts both a global scaling factor and layer-specific weights. The predicted global scaling factor and layer-specific weights then dynamically modulate the intensity of a steering patch, derived from a pre-computed \"refusal direction\" vector, applied across the LLM's layers during generation. Trained on activations from both harmful and benign prompts, our controller learns to discriminatively apply nuanced, layer-aware interventions, activating steering primarily for harmful inputs. Experiments using safety benchmarks like ToxicChat & In-The-Wild Jailbreak Prompts demonstrate that our weighted steering controller significantly increases refusal rates compared to the base LLM, achieving targeted behavioral modification without altering the original model parameters. Our experiments with Llama-3.1-8B, Llama-3.2-1B & Mistral-7B show our approach outperforms existing methods, presenting an efficient and adaptive method for fine-grained control over LLM behavior at inference time.",
+    "expected_fields": [
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "methods:\n- Introduction of a lightweight, trainable controller network during inference.\n- The controller network observes specific intermediate LLM activations and predicts both a global scaling factor and layer-specific weights.\n- The predicted global scaling factor and layer-specific weights dynamically modulate the intensity of a steering patch derived from a pre-computed 'refusal direction' vector.\n- The steering patch is applied across the LLM's layers during generation.\n- Training of the controller network on activations from harmful and benign prompts to learn nuanced, layer-aware interventions.\ngaps:\n- Existing methods for inference-time control typically lack fine-grained, adaptive mechanisms.\n- The need for costly fine-tuning to control undesirable LLM behaviors",
+    "prediction_text": "methods:\n- Activation steering\n- Lightweight, trainable controller network integrated during inference\n- Prediction of global scaling factor and layer-specific weights\n- Dynamic modulation of steering patch intensity using refusal direction vector\n- Application of nuanced, layer-aware interventions\ngaps:\n- Existing methods lack fine-grained, adaptive mechanisms for controlling undesirable behaviors in Large Language Models (LLMs)\n- The need for costly fine-tuning to control LLM behaviors\n- Limited efficiency and adaptability of existing methods for fine-grained control over LLM behavior at inference time",
+    "schema_check": {
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 27,
+    "instruction": "Find contradictions in this research and identify its methodology.",
+    "input": "Traditional recommender systems such as matrix factorization methods have primarily focused on learning a shared dense embedding space to represent both items and user preferences. Subsequently, sequence models such as RNN, GRUs, and, recently, Transformers have emerged and excelled in the task of sequential recommendation. This task requires understanding the sequential structure present in users' historical interactions to predict the next item they may like. Building upon the success of Large Language Models (LLMs) in a variety of tasks, researchers have recently explored using LLMs that are pretrained on vast corpora of text for sequential recommendation. To use LLMs for sequential recommendation, both the history of user interactions and the model's prediction of the next item are expressed in text form. We propose CALRec, a two-stage LLM finetuning framework that finetunes a pretrained LLM in a two-tower fashion using a mixture of two contrastive losses and a language modeling loss: the LLM is first finetuned on a data mixture from multiple domains followed by another round of target domain finetuning. Our model significantly outperforms many state-of-the-art baselines (+37% in Recall@1 and +24% in NDCG@10) and our systematic ablation studies reveal that (i) both stages of finetuning are crucial, and, when combined, we achieve improved performance, and (ii) contrastive alignment is effective among the target domains explored in our experiments.",
+    "expected_fields": [
+      "contradictions",
+      "methods"
+    ],
+    "reference_text": "contradictions:\n\nmethods:\n- Traditional recommender systems such as matrix factorization methods\n- Sequence models like RNN, GRUs, and Transformers for sequential recommendation\n- Large Language Models (LLMs) pretrained on vast corpora of text for sequential recommendation\n- CALRec: a two-stage LLM finetuning framework using a mixture of two contrastive losses and a language modeling loss",
+    "prediction_text": "contradictions:\nThe abstract does not mention any contradictions.\nmethods:\n- Traditional recommender systems such as matrix factorization methods\n- Sequence models such as RNN, GRUs, and Transformers\n- Large Language Models (LLMs) for sequential recommendation\n- Two-stage LLM finetuning framework (CALRec)\n- Finetuning a pretrained LLM in a two-tower fashion\n- Using a mixture of two contrastive losses and a language modeling loss\n- Finetuning on a data mixture from multiple domains\n- Another round of target domain finetuning",
+    "schema_check": {
+      "contradictions": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 28,
+    "instruction": "Give me a technical breakdown of this paper.",
+    "input": "Using the full potential of LLMs in higher education is hindered by challenges with access to LLMs. The two main access modes currently discussed are paying for a cloud-based LLM or providing a locally maintained open LLM. In this paper, we describe the current state of establishing an open LLM infrastructure at FernUniversität in Hagen under the project name FLEXI (FernUni LLM Experimental Infrastructure). FLEXI enables experimentation within teaching and research with the goal of generating strongly needed evidence in favor (or against) the use of locally maintained open LLMs in higher education. The paper will provide some practical guidance for everyone trying to decide whether to run their own LLM server.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps",
+      "evaluation"
+    ],
+    "reference_text": "summary:\n- The paper discusses the challenges in utilizing Language Learning Models (LLMs) in higher education due to access issues. It introduces FLEXI, an open LLM infrastructure project at FernUniversität in Hagen, aimed at experimenting with teaching and research using locally maintained open LLMs.\n- The objective of FLEXI is to generate evidence supporting (or contradicting) the use of locally maintained open LLMs in higher education.\nmethods:\n- Description of the current state of establishing an open LLM infrastructure at FernUniversität in Hagen under the project name FLEXI.\n- Experimentation within teaching and research using FLEXI for generating needed evidence.\ngaps:\n- The paper does not specifically identify gaps in the existing literature or research. However, it highlights the need for evidence to support (or contradict) the use of locally maintained open LLMs in higher education.\nevaluation:\n- The evaluation will be based on the results generated from experimentation within teaching and research using FLEXI.\n- The evaluation aims to provide practical guidance for those considering running their own LLM server.",
+    "prediction_text": "summary:\n- The paper discusses the challenges in utilizing the full potential of Large Language Models (LLMs) in higher education due to access issues. Two main access modes are currently debated: cloud-based paid LLMs and locally maintained open LLMs.\n- The paper presents the establishment of an open LLM infrastructure at FernUniversität in Hagen, named FLEXI (FernUni LLM Experimental Infrastructure). FLEXI aims to facilitate experimentation within teaching and research for generating evidence in favor (or against) the use of locally maintained open LLMs in higher education.\nmethods:\n- Establishment of an open LLM infrastructure at FernUniversität in Hagen named FLEXI\n- Enabling experimentation within teaching and research\n- Generating evidence in favor (or against) the use of locally maintained open LLMs in higher education\ngaps:\n- The paper does not provide specific details about the challenges faced during the establishment of FLEXI\n- It also does not discuss potential solutions for these challenges\nevaluation:\n- The paper does not present any evaluation results as it is still an ongoing project",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true,
+      "evaluation": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 29,
+    "instruction": "Identify the key methodology and common research gaps in this paper.",
+    "input": "Modular vision-language models (Vision-LLMs) align pretrained image encoders with (frozen) large language models (LLMs) and post-hoc condition LLMs to `understand' the image input. With the abundance of readily available high-quality English image-text data as well as strong monolingual English LLMs, the research focus has been on English-only Vision-LLMs. Multilingual vision-language models are still predominantly obtained via expensive end-to-end pretraining, resulting in comparatively smaller models, trained on limited multilingual image data supplemented with text-only multilingual corpora. We present mBLIP, the first Vision-LLM leveraging multilingual LLMs, which we obtain in a computationally efficient manner on consumer-level hardware. To this end, we \\textit{re-align} an image encoder previously tuned to an English LLM to a new, multilingual LLM using only a few million multilingual training examples derived from a mix of vision-and-language tasks, which we obtain by machine-translating high-quality English data to 95 languages. On the IGLUE benchmark and XM3600, mBLIP yields results competitive with state-of-the-art models and it greatly outperforms strong English-only Vision-LLMs like Llava 1.5. We release our model, code, and train data at \\url{https://github.com/gregor-ge/mBLIP}.",
+    "expected_fields": [
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "methods:\n- Modular vision-language models (Vision-LLMs) are constructed by aligning pretrained image encoders with frozen large language models (LLMs).\n- The study presents a method to re-align an image encoder previously tuned to an English LLM to a new, multilingual LLM using only a few million multilingual training examples.\n- These examples are derived from a mix of vision-and-language tasks obtained by machine-translating high-quality English data to 95 languages.\ngaps:\n- The research focus has been on English-only Vision-LLMs, and multilingual vision-language models are still predominantly obtained via expensive end-to-end pretraining.\n- This leads to comparatively smaller models trained on limited multilingual image data supplemented with text-only multilingual corpora.",
+    "prediction_text": "methods:\n- Modular vision-language models (Vision-LLMs)\n- Aligning pretrained image encoders with (frozen) large language models (LLMs) and post-hoc condition LLMs\n- Re-aligning an image encoder previously tuned to an English LLM to a new, multilingual LLM using only a few million multilingual training examples\n- Obtaining multilingual training examples by machine-translating high-quality English data to 95 languages\ngaps:\n- Multilingual vision-language models are still predominantly obtained via expensive end-to-end pretraining, resulting in comparatively smaller models, trained on limited multilingual image data supplemented with text-only multilingual corpora",
+    "schema_check": {
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 30,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Equitable access to reliable health information is vital when integrating AI into healthcare. Yet, information quality varies across languages, raising concerns about the reliability and consistency of multilingual Large Language Models (LLMs). We systematically examine cross-lingual disparities in pre-training source and factuality alignment in LLM answers for multilingual healthcare Q&A across English, German, Turkish, Chinese (Mandarin), and Italian. We (i) constructed Multilingual Wiki Health Care (MultiWikiHealthCare), a multilingual dataset from Wikipedia; (ii) analyzed cross-lingual healthcare coverage; (iii) assessed LLM response alignment with these references; and (iv) conducted a case study on factual alignment through the use of contextual information and Retrieval-Augmented Generation (RAG). Our findings reveal substantial cross-lingual disparities in both Wikipedia coverage and LLM factual alignment. Across LLMs, responses align more with English Wikipedia, even when the prompts are non-English. Providing contextual excerpts from non-English Wikipedia at inference time effectively shifts factual alignment toward culturally relevant knowledge. These results highlight practical pathways for building more equitable, multilingual AI systems for healthcare.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- The study examines cross-lingual disparities in pre-training source and factuality alignment in Large Language Models (LLMs) for multilingual healthcare Q&A across English, German, Turkish, Chinese (Mandarin), and Italian. They constructed Multilingual Wiki Health Care (MultiWikiHealthCare), a multilingual dataset from Wikipedia, analyzed cross-lingual healthcare coverage, assessed LLM response alignment with these references, and conducted a case study on factual alignment through the use of contextual information and Retrieval-Augmented Generation (RAG). Findings reveal substantial cross-lingual disparities in both Wikipedia coverage and LLM factual alignment. Across LLMs, responses align more with English Wikipedia, even when prompts are non-English. Providing contextual excerpts from non-English Wikipedia at inference time effectively shifts factual alignment toward culturally relevant knowledge.",
+    "prediction_text": "summary:\n- The study examines cross-lingual disparities in pre-training source and factuality alignment of Large Language Models (LLMs) in multilingual healthcare Q&A across English, German, Turkish, Chinese (Mandarin), and Italian.\n- A multilingual dataset named Multilingual Wiki Health Care (MultiWikiHealthCare) was constructed from Wikipedia for analysis.\n- The research reveals substantial cross-lingual disparities in both Wikipedia coverage and LLM factual alignment.\n- Across LLMs, responses align more with English Wikipedia, even when the prompts are non-English.\n- Providing contextual excerpts from non-English Wikipedia at inference time effectively shifts factual alignment toward culturally relevant knowledge.\n- The findings highlight practical pathways for building more equitable, multilingual AI systems for healthcare.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 31,
+    "instruction": "Extract a summary, methods, and gaps for this research paper.",
+    "input": "Jailbreaks on large language models (LLMs) have recently received increasing attention. For a comprehensive assessment of LLM safety, it is essential to consider jailbreaks with diverse attributes, such as contextual coherence and sentiment/stylistic variations, and hence it is beneficial to study controllable jailbreaking, i.e. how to enforce control on LLM attacks. In this paper, we formally formulate the controllable attack generation problem, and build a novel connection between this problem and controllable text generation, a well-explored topic of natural language processing. Based on this connection, we adapt the Energy-based Constrained Decoding with Langevin Dynamics (COLD), a state-of-the-art, highly efficient algorithm in controllable text generation, and introduce the COLD-Attack framework which unifies and automates the search of adversarial LLM attacks under a variety of control requirements such as fluency, stealthiness, sentiment, and left-right-coherence. The controllability enabled by COLD-Attack leads to diverse new jailbreak scenarios which not only cover the standard setting of generating fluent (suffix) attack with continuation constraint, but also allow us to address new controllable attack settings such as revising a user query adversarially with paraphrasing constraint, and inserting stealthy attacks in context with position constraint. Our extensive experiments on various LLMs (Llama-2, Mistral, Vicuna, Guanaco, GPT-3.5, and GPT-4) show COLD-Attack's broad applicability, strong controllability, high success rate, and attack transferability. Our code is available at https://github.com/Yu-Fangxu/COLD-Attack.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "summary:\n- The paper discusses the issue of jailbreaks on large language models (LLMs) and the need for a comprehensive assessment of LLM safety. It proposes a novel connection between controllable attack generation and controllable text generation, leading to the introduction of the COLD-Attack framework which automates the search of adversarial LLM attacks under various control requirements such as fluency, stealthiness, sentiment, and left-right coherence. The framework is shown to be broadly applicable, highly controllable, and successful on multiple LLMs.\n- The COLD-Attack framework adapts the Energy-based Constrained Decoding with Langevin Dynamics (COLD), a state-of-the-art algorithm in controllable text generation, to generate diverse new jailbreak scenarios beyond just generating fluent suffix attacks. These new settings include revising user queries adversarially with paraphrasing constraints and inserting stealthy attacks in context with position constraints.\n- The paper presents experiments on various LLMs (Llama-2, Mistral, Vicuna, Guanaco, GPT-3.5, and GPT-4) demonstrating the broad applicability, strong controllability, high success rate, and attack transferability of COLD-Attack.\nmethods:\n- Formal formulation of the controllable attack generation problem\n- Adaptation of Energy-based Constrained Decoding with Langevin Dynamics (COLD)\n- Introduction of the COLD-Attack framework which unifies and automates the search of adversarial LLM attacks under various control requirements such as fluency, stealthiness, sentiment, and left-right coherence\ngaps:\n- The paper does not discuss potential countermeasures to prevent or mitigate controllable jailbreaking. Further research could focus on developing defenses against these types of attacks.",
+    "prediction_text": "summary:\n- The paper discusses the issue of jailbreaks on large language models (LLMs) and the importance of studying controllable jailbreaking to assess LLM safety.\n- A formal problem formulation for controllable attack generation is presented, and a connection is made between this problem and controllable text generation.\n- The COLD-Attack framework is introduced, which uses the Energy-based Constrained Decoding with Langevin Dynamics (COLD) algorithm from controllable text generation to unify and automate the search of adversarial LLM attacks under various control requirements such as fluency, stealthiness, sentiment, and left-right-coherence.\n- The paper presents diverse new jailbreak scenarios enabled by COLD-Attack, including generating fluent (suffix) attacks with continuation constraint, revising a user query adversarially with paraphrasing constraint, and inserting stealthy attacks in context with position constraint.\n- Extensive experiments on various LLMs (Llama-2, Mistral, Vicuna, Guanaco, GPT-3.5, and GPT-4) show COLD-Attack's broad applicability, strong controllability, high success rate, and attack transferability.\nmethods:\n- Formal problem formulation for controllable attack generation\n- Connection between controllable attack generation and controllable text generation\n- Adaptation of the Energy-based Constrained Decoding with Langevin Dynamics (COLD) algorithm from controllable text generation\n- Introduction of the COLD-Attack framework\n- Unification and automation of the search of adversarial LLM attacks under various control requirements\ngaps:\n- The paper does not discuss potential countermeasures or defenses against the controllable jailbreaking techniques presented.\n- It is unclear how the COLD-Attack framework compares to other existing methods for generating adversarial attacks on LLMs.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 32,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Large Language Models (LLMs), such as the GPT series, have driven significant industrial applications, leading to economic and societal transformations. However, a comprehensive understanding of their real-world applications remains limited. To address this, we introduce REALM, a dataset of over 94,000 LLM use cases collected from Reddit and news articles. REALM captures two key dimensions: the diverse applications of LLMs and the demographics of their users. It categorizes LLM applications and explores how users' occupations relate to the types of applications they use. By integrating real-world data, REALM offers insights into LLM adoption across different domains, providing a foundation for future research on their evolving societal roles.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- The abstract introduces REALM, a dataset comprising over 94,000 use cases of Large Language Models (LLMs) like GPT series from Reddit and news articles. This data collection aims to provide a more comprehensive understanding of LLM's real-world applications. REALM focuses on two aspects: the diverse applications of LLMs and the demographics of their users. It categorizes these applications, analyzing how occupations influence the types of applications used by individuals. By integrating real-world data, REALM offers insights into LLM adoption across various domains, serving as a foundation for future research on their developing societal roles.",
+    "prediction_text": "summary:\n- The abstract introduces REALM, a dataset of over 94,000 Large Language Model (LLM) use cases collected from Reddit and news articles. The dataset aims to provide a comprehensive understanding of real-world applications of LLMs and the demographics of their users. It categorizes LLM applications and explores how users' occupations relate to the types of applications they use. By integrating real-world data, REALM offers insights into LLM adoption across different domains, serving as a foundation for future research on their evolving societal roles.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 33,
+    "instruction": "Critically evaluate this research and its proposed methodology.",
+    "input": "Large language models (LLMs) are increasingly deployed as the service backend for LLM-integrated applications such as code completion and AI-powered search. LLM-integrated applications serve as middleware to refine users' queries with domain-specific knowledge to better inform LLMs and enhance the responses. Despite numerous opportunities and benefits, LLM-integrated applications also introduce new attack surfaces. Understanding, minimizing, and eliminating these emerging attack surfaces is a new area of research. In this work, we consider a setup where the user and LLM interact via an LLM-integrated application in the middle. We focus on the communication rounds that begin with user's queries and end with LLM-integrated application returning responses to the queries, powered by LLMs at the service backend. For this query-response protocol, we identify potential vulnerabilities that can originate from the malicious application developer or from an outsider threat initiator that is able to control the database access, manipulate and poison data that are high-risk for the user. Successful exploits of the identified vulnerabilities result in the users receiving responses tailored to the intent of a threat initiator. We assess such threats against LLM-integrated applications empowered by OpenAI GPT-3.5 and GPT-4. Our empirical results show that the threats can effectively bypass the restrictions and moderation policies of OpenAI, resulting in users receiving responses that contain bias, toxic content, privacy risk, and disinformation. To mitigate those threats, we identify and define four key properties, namely integrity, source identification, attack detectability, and utility preservation, that need to be satisfied by a safe LLM-integrated application. Based on these properties, we develop a lightweight, threat-agnostic defense that mitigates both insider and outsider threats.",
+    "expected_fields": [
+      "evaluation",
+      "methods"
+    ],
+    "reference_text": "evaluation:\nThe empirical results show that the threats can effectively bypass the restrictions and moderation policies of OpenAI, resulting in users receiving responses that contain bias, toxic content, privacy risk, and disinformation.\nmethods:\n- To mitigate those threats, the work identifies and defines four key properties, namely integrity, source identification, attack detectability, and utility preservation, that need to be satisfied by a safe LLM-integrated application.\n- Based on these properties, they develop a lightweight, threat-agnostic defense that mitigates both insider and outsider threats.",
+    "prediction_text": "evaluation:\nThe empirical results show that the threats can effectively bypass the restrictions and moderation policies of OpenAI, resulting in users receiving responses that contain bias, toxic content, privacy risk, and disinformation.\nmethods:\n- Identification of potential vulnerabilities that can originate from the malicious application developer or from an outsider threat initiator\n- Focus on the communication rounds between user's queries and LLM-integrated application responses\n- Assessment of threats against LLM-integrated applications empowered by OpenAI GPT-3.5 and GPT-4\n- Development of a lightweight, threat-agnostic defense to mitigate both insider and outsider threats",
+    "schema_check": {
+      "evaluation": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 34,
+    "instruction": "Compare this method with traditional approaches in the field.",
+    "input": "Large Language Models (LLMs) can make up answers that are not real, and this is known as hallucination. This research aims to see if, how, and to what extent LLMs are aware of hallucination. More specifically, we check whether and how an LLM reacts differently in its hidden states when it answers a question right versus when it hallucinates. To do this, we introduce an experimental framework which allows examining LLM's hidden states in different hallucination situations. Building upon this framework, we conduct a series of experiments with language models in the LLaMA family (Touvron et al., 2023). Our empirical findings suggest that LLMs react differently when processing a genuine response versus a fabricated one. We then apply various model interpretation techniques to help understand and explain the findings better. Moreover, informed by the empirical observations, we show great potential of using the guidance derived from LLM's hidden representation space to mitigate hallucination. We believe this work provides insights into how LLMs produce hallucinated answers and how to make them occur less often.",
+    "expected_fields": [
+      "comparison",
+      "summary"
+    ],
+    "reference_text": "comparison:\n- The research compares the behavior of Large Language Models (LLMs) when answering questions accurately versus hallucinating.\n- It is observed that LLMs react differently in their hidden states when providing a genuine response compared to fabricating an answer.\nsummary:\n- This study investigates the awareness of LLMs regarding hallucination, examining how they behave differently in various hallucination scenarios. Empirical findings suggest that LLMs process information differently for real responses versus hallucinated ones. The research then utilizes model interpretation techniques to better understand these findings and demonstrates potential for using guidance derived from LLM's hidden representation space to reduce hallucinations. The study aims to provide insights into the mechanisms behind LLMs producing hallucinated answers and methods to minimize their occurrence.",
+    "prediction_text": "comparison:\n- The research compares the behavior of Large Language Models (LLMs) when answering a question right versus when hallucinating.\nsummary:\n- This study introduces an experimental framework to examine LLMs' hidden states in different hallucination situations. Experiments with LLaMA family models suggest that LLMs react differently when processing genuine responses versus fabricated ones. Various model interpretation techniques are applied to understand and explain these findings. The research also shows potential in using guidance derived from LLM's hidden representation space to mitigate hallucination.",
+    "schema_check": {
+      "comparison": true,
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 35,
+    "instruction": "Critically evaluate this research and its proposed methodology.",
+    "input": "Understanding the reliability of large language models (LLMs) has recently garnered significant attention. Given LLMs' propensity to hallucinate, as well as their high sensitivity to prompt design, it is already challenging to predict the performance of an individual LLM. However, the problem becomes more complex for compound LLM systems such as cascades, where in addition to each model's standalone performance, we must understand how the error rates of different models interact. In this paper, we present a probabilistic model for the joint performance distribution of a sequence of LLMs, which enables a framework for rationally tuning the confidence thresholds of a LLM cascade using continuous optimization. Compared to selecting confidence thresholds using Bayesian optimization, our parametric Markov-copula model yields more favorable error-cost trade-offs, improving the area under the error-cost curve by 4.3% on average for cascades with $k\\geq 3$ models. In the low-sample regime with $n \\leq 30$ training examples, the performance improvement widens to 10.2%, suggesting that our framework's inductive assumptions about the interactions between the error rates of different LLMs enhance sample efficiency. Overall, our Markov-copula model provides a rational basis for tuning LLM cascade performance and points to the potential of probabilistic methods in analyzing systems of LLMs.",
+    "expected_fields": [
+      "evaluation",
+      "methods"
+    ],
+    "reference_text": "evaluation:\nThe paper presents an evaluation of the performance improvement for compound Large Language Model (LLM) systems, specifically LLM cascades. The improvement is measured by comparing the area under the error-cost curve (AUC). For cascades with $k extrm{ } extgreater= 3$ models, the parametric Markov-copula model yields an average improvement of 4.3%. In the low-sample regime with $n extrm{ } extless= 30$ training examples, the performance improvement widens to 10.2%, indicating enhanced sample efficiency. The evaluation is based on empirical results.\nmethods:\nThe methods presented in the paper include a probabilistic model for the joint performance distribution of a sequence of Large Language Models (LLMs). This model enables rational tuning of the confidence thresholds of an LLM cascade using continuous optimization. The authors use a parametric Markov-copula model as opposed to Bayesian optimization, which is compared and found to yield more favorable error-cost trade-offs.",
+    "prediction_text": "evaluation:\nThe paper presents a probabilistic model for the joint performance distribution of a sequence of large language models (LLMs) in compound systems such as cascades. The model enables a framework for rationally tuning the confidence thresholds of a LLM cascade using continuous optimization. The evaluation shows that this parametric Markov-copula model yields more favorable error-cost trade-offs compared to Bayesian optimization, improving the area under the error-cost curve by 4.3% on average for cascades with $k≥3$ models. In the low-sample regime with $n≤30$ training examples, the performance improvement widens to 10.2%, suggesting that the framework's inductive assumptions about the interactions between the error rates of different LLMs enhance sample efficiency.\nmethods:\n- Probabilistic model for the joint performance distribution of a sequence of LLMs\n- Parametric Markov-copula model\n- Continuous optimization for tuning the confidence thresholds of a LLM cascade\n- Bayesian optimization for comparison",
+    "schema_check": {
+      "evaluation": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 36,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Large Language Models (LLMs) have recently empowered agentic frameworks to exhibit advanced reasoning and planning capabilities. However, their integration in robotic control pipelines remains limited in two aspects: (1) prior \\ac{llm}-based approaches often lack modular, agentic execution mechanisms, limiting their ability to plan, reflect on outcomes, and revise actions in a closed-loop manner; and (2) existing benchmarks for manipulation tasks focus on low-level control and do not systematically evaluate multistep reasoning and linguistic variation. In this paper, we propose Agentic LLM for Robot Manipulation (ALRM), an LLM-driven agentic framework for robotic manipulation. ALRM integrates policy generation with agentic execution through a ReAct-style reasoning loop, supporting two complementary modes: Code-asPolicy (CaP) for direct executable control code generation, and Tool-as-Policy (TaP) for iterative planning and tool-based action execution. To enable systematic evaluation, we also introduce a novel simulation benchmark comprising 56 tasks across multiple environments, capturing linguistically diverse instructions. Experiments with ten LLMs demonstrate that ALRM provides a scalable, interpretable, and modular approach for bridging natural language reasoning with reliable robotic execution. Results reveal Claude-4.1-Opus as the top closed-source model and Falcon-H1-7B as the top open-source model under CaP.",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- The paper introduces Agentic LLM for Robot Manipulation (ALRM), an agentic framework that integrates policy generation with execution through a ReAct-style reasoning loop. ALRM supports two modes: Code-asPolicy (CaP) for direct executable control code generation, and Tool-as-Policy (TaP) for iterative planning and tool-based action execution. A novel simulation benchmark of 56 tasks across multiple environments is introduced to enable systematic evaluation. Results indicate that ALRM offers a scalable, interpretable, and modular approach for bridging natural language reasoning with reliable robotic execution. Claude-4.1-Opus and Falcon-H1-7B are identified as the top closed-source and open-source models under CaP mode, respectively.",
+    "prediction_text": "summary:\n- The paper proposes Agentic LLM for Robot Manipulation (ALRM), an LLM-driven agentic framework for robotic manipulation. ALRM integrates policy generation with agentic execution through a ReAct-style reasoning loop, supporting two modes: Code-asPolicy (CaP) and Tool-as-Policy (TaP). A novel simulation benchmark is introduced to evaluate the framework, consisting of 56 tasks across multiple environments that capture linguistically diverse instructions. Experiments with ten LLMs demonstrate ALRM's scalability, interpretability, and modularity in bridging natural language reasoning with reliable robotic execution. Claude-4.1-Opus is identified as the top closed-source model, while Falcon-H1-7B is the top open-source model under CaP.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 37,
+    "instruction": "Identify the key methodology and common research gaps in this paper.",
+    "input": "The rapid evolution of Large Language Model (LLM) inference systems has yielded significant efficiency improvements. However, our systematic analysis reveals that current evaluation methodologies frequently exhibit fundamental flaws, often manifesting as common evaluation anti-patterns that obscure true performance characteristics and impede scientific progress. Through a comprehensive examination of recent systems, we identify recurring anti-patterns across three key dimensions: Baseline Fairness, Evaluation Setup, and Metric Design. These anti-patterns are uniquely problematic for LLM inference due to its dual-phase nature combining distinct prefill and decode operations, its handling of highly heterogeneous workloads, and its strict temporal requirements for interactive use. We demonstrate how common anti-patterns -- such as inadequate baseline comparisons that conflate engineering effort with algorithmic novelty, workload selections that fail to represent production scenarios, and metric normalizations that hide substantial performance variability like generation stalls-lead to misleading conclusions. To address these challenges, we provide a comprehensive checklist derived from our analysis, establishing a framework for recognizing and avoiding these anti-patterns in favor of robust LLM inference evaluation. To demonstrate the practical application of our framework, we present a case study analyzing speculative decoding, a technique whose bursty, non-uniform token generation is easily misinterpreted when evaluated using approaches characteristic of these anti-patterns. Our work establishes a rigorous foundation for evaluation methodology, enabling meaningful comparisons, ensuring reproducible results, and ultimately accelerating genuine progress in LLM inference systems by moving beyond common anti-patterns to align evaluation with real-world requirements.",
+    "expected_fields": [
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "methods:\n- Comprehensive examination of recent Large Language Model (LLM) inference systems to identify recurring anti-patterns across three key dimensions: Baseline Fairness, Evaluation Setup, and Metric Design.\n- Provision of a comprehensive checklist derived from the analysis, establishing a framework for recognizing and avoiding these anti-patterns in favor of robust LLM inference evaluation.\ngaps:\n- Frequent occurrence of fundamental flaws in current evaluation methodologies for LLM inference systems.\n- Misleading conclusions due to common anti-patterns such as inadequate baseline comparisons, workload selections that fail to represent production scenarios, and metric normalizations that hide substantial performance variability like generation stalls.",
+    "prediction_text": "methods:\n- Comprehensive examination of recent Large Language Model (LLM) inference systems\n- Identification of recurring anti-patterns across three key dimensions: Baseline Fairness, Evaluation Setup, and Metric Design\n- Demonstration of how common anti-patterns lead to misleading conclusions\n- Provision of a comprehensive checklist derived from the analysis\ngaps:\n- Ineadequate baseline comparisons that conflate engineering effort with algorithmic novelty\n- Workload selections that fail to represent production scenarios\n- Metric normalizations that hide substantial performance variability like generation stalls",
+    "schema_check": {
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 38,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "Large language models (LLMs) are increasingly used for decision-making tasks under uncertainty; however, their risk profiles and how they are influenced by prompting and alignment methods remain underexplored. Existing studies have primarily examined personality prompting or multi-agent interactions, leaving open the question of how post-training influences the risk behavior of LLMs. In this work, we propose a new pipeline for eliciting, steering, and modulating LLMs' risk profiles, drawing on tools from behavioral economics and finance. Using utility-theoretic models, we compare pre-trained, instruction-tuned, and RLHF-aligned LLMs, and find that while instruction-tuned models exhibit behaviors consistent with some standard utility formulations, pre-trained and RLHF-aligned models deviate more from any utility models fitted. We further evaluate modulation strategies, including prompt engineering, in-context learning, and post-training, and show that post-training provides the most stable and effective modulation of risk preference. Our findings provide insights into the risk profiles of different classes and stages of LLMs and demonstrate how post-training modulates these profiles, laying the groundwork for future research on behavioral alignment and risk-aware LLM design.",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The study primarily examines personality prompting or multi-agent interactions, leaving open the question of how post-training influences the risk behavior of LLMs in more general contexts.\n- There is no explicit examination of how different types of prompts other than personality prompting might influence the risk profiles of LLMs.\ncontradictions:\n- While instruction-tuned models exhibit behaviors consistent with some standard utility formulations, pre-trained and RLHF-aligned models deviate more from any utility models fitted. However, it is not clear whether this deviation indicates a contradiction or simply a different behavior pattern.",
+    "prediction_text": "gaps:\n- The study does not examine how post-training influences the risk behavior of LLMs in detail.\n- It is unclear whether the findings on risk profiles are generalizable to all types of LLMs.\ncontradictions:\n- The study finds that pre-trained and RLHF-aligned models deviate more from any utility models fitted, but it does not provide information about the specific utility models used for comparison.",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 39,
+    "instruction": "Extract a summary, methods, and gaps for this research paper.",
+    "input": "With the increasing quality and spread of LLM-based assistants, the amount of LLM-generated content is growing rapidly. In many cases and tasks, such texts are already indistinguishable from those written by humans, and the quality of generation tends to only increase. At the same time, detection methods are developing more slowly, making it challenging to prevent misuse of generative AI technologies.   In this work, we investigate the task of generated text detection by proposing the GigaCheck. Our research explores two approaches: (i) distinguishing human-written texts from LLM-generated ones, and (ii) detecting LLM-generated intervals in Human-Machine collaborative texts. For the first task, our approach utilizes a general-purpose LLM, leveraging its extensive language abilities to fine-tune efficiently for the downstream task of LLM-generated text detection, achieving high performance even with limited data. For the second task, we propose a novel approach that combines computer vision and natural language processing techniques. Specifically, we use a fine-tuned general-purpose LLM in conjunction with a DETR-like detection model, adapted from computer vision, to localize AI-generated intervals within text.   We evaluate the GigaCheck on five classification datasets with English texts and three datasets designed for Human-Machine collaborative text analysis. Our results demonstrate that GigaCheck outperforms previous methods, even in out-of-distribution settings, establishing a strong baseline across all datasets.",
+    "expected_fields": [
+      "summary",
+      "methods"
+    ],
+    "reference_text": "summary:\n- The abstract discusses the rapid growth of LLM-generated content due to improved quality and spread of LLM-based assistants. It introduces GigaCheck, a proposed text detection method aimed at distinguishing human-written texts from LLM-generated ones and detecting LLM-generated intervals in Human-Machine collaborative texts.\n- The research uses a general-purpose LLM for efficient fine-tuning in the first task of LLM-generated text detection, achieving high performance even with limited data. For the second task, a novel approach combines computer vision and natural language processing techniques.\nmethods:\n- For the first task (distinguishing human-written texts from LLM-generated ones), the approach utilizes a general-purpose LLM to fine-tune efficiently for the downstream task of LLM-generated text detection.\n- For evaluating, five classification datasets with English texts and three datasets designed for Human-Machine collaborative text analysis were used.\n- For the second task (detecting LLM-generated intervals in Human-Machine collaborative texts), a novel approach combines a fine-tuned general-purpose LLM with a DETR-like detection model, adapted from computer vision, to localize AI-generated intervals within text.\n- ],\n- gaps",
+    "prediction_text": "summary:\n- The abstract discusses the increasing use and quality of LLM-based assistants, leading to a surge in LLM-generated content. The challenge lies in detecting these texts due to the slow development of detection methods.\n- The proposed solution is GigaCheck, which aims to distinguish human-written texts from LLM-generated ones and detect LLM-generated intervals in Human-Machine collaborative texts.\n- The first approach utilizes a general-purpose LLM for fine-tuning, achieving high performance with limited data.\n- The second approach combines computer vision and natural language processing techniques, using a fine-tuned general-purpose LLM and a DETR-like detection model adapted from computer vision to localize AI-generated intervals within text.\nmethods:\n- Utilizing a general-purpose LLM for fine-tuning in the downstream task of LLM-generated text detection\n- Proposing a novel approach that combines computer vision and natural language processing techniques\n- Using a fine-tuned general-purpose LLM in conjunction with a DETR-like detection model to localize AI-generated intervals within text",
+    "schema_check": {
+      "summary": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 40,
+    "instruction": "Identify the key methodology and common research gaps in this paper.",
+    "input": "Large language models (LLMs) have recently received significant attention for their exceptional capabilities. Despite extensive efforts in developing general-purpose LLMs that can be utilized in various natural language processing (NLP) tasks, there has been less research exploring their potential in recommender systems. In this paper, we propose a novel framework, named PALR, which aiming to combine user history behaviors (such as clicks, purchases, ratings, etc.) with LLMs to generate user preferred items. Specifically, we first use user/item interactions as guidance for candidate retrieval. Then we adopt a LLM-based ranking model to generate recommended items. Unlike existing approaches that typically adopt general-purpose LLMs for zero/few-shot recommendation testing or training on small-sized language models (with less than 1 billion parameters), which cannot fully elicit LLMs' reasoning abilities and leverage rich item side parametric knowledge, we fine-tune a 7 billion parameters LLM for the ranking purpose. This model takes retrieval candidates in natural language format as input, with instruction which explicitly asking to select results from input candidates during inference. Our experimental results demonstrate that our solution outperforms state-of-the-art models on various sequential recommendation tasks.",
+    "expected_fields": [
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "methods:\n- Proposal of a novel framework named PALR\n- Use of user/item interactions for candidate retrieval\n- Adoption of a LLM-based ranking model to generate recommended items\n- Fine-tuning a 7 billion parameters LLM for the ranking purpose\n- The model takes retrieval candidates in natural language format as input, with instruction which explicitly asks to select results from input candidates during inference\ngaps:\n- Less research exploring potential of large language models (LLMs) in recommender systems\n- Existing approaches typically adopt general-purpose LLMs for zero/few-shot recommendation testing or training on small-sized language models, which cannot fully elicit LLMs' reasoning abilities and leverage rich item side parametric knowledge",
+    "prediction_text": "methods:\n- Proposal of a novel framework named PALR\n- User/item interactions used as guidance for candidate retrieval\n- Adoption of a Large Language Model (LLM)-based ranking model\n- Fine-tuning a 7 billion parameters LLM for the ranking purpose\n- Input of retrieval candidates in natural language format\n- Explicit instruction asking to select results from input candidates during inference\ngaps:\n- Less research exploring the potential of LLMs in recommender systems\n- Existing approaches typically adopt general-purpose LLMs for zero/few-shot recommendation testing or training on small-sized language models (with less than 1 billion parameters)\n- Cannot fully elicit LLMs' reasoning abilities and leverage rich item side parametric knowledge",
+    "schema_check": {
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 41,
+    "instruction": "Find contradictions in this research and identify its methodology.",
+    "input": "LLMs have demonstrated impressive performance across various language tasks. However, the strengths of LLMs can vary due to different architectures, model sizes, areas of training data, etc. Therefore, ensemble reasoning for the strengths of different LLM experts is critical to achieving consistent and satisfactory performance on diverse inputs across a wide range of tasks. However, existing LLM ensemble methods are either computationally intensive or incapable of leveraging complementary knowledge among LLM experts for various inputs. In this paper, we propose an efficient Dynamic Ensemble Reasoning paradigm, called DER to integrate the strengths of multiple LLM experts conditioned on dynamic inputs. Specifically, we model the LLM ensemble reasoning problem as a Markov Decision Process, wherein an agent sequentially takes inputs to request knowledge from an LLM candidate and passes the output to a subsequent LLM candidate. Moreover, we devise a reward function to train a DER-Agent to dynamically select an optimal answering route given the input questions, aiming to achieve the highest performance with as few computational resources as possible. Last, to fully transfer the expert knowledge from the prior LLMs, we develop a Knowledge Transfer Prompt that enables the subsequent LLM candidates to transfer complementary knowledge effectively. Experiments demonstrate that our method uses fewer computational resources to achieve better performance compared to state-of-the-art baselines. Code and appendix are available at https://github.com/Fhujinwu/DER",
+    "expected_fields": [
+      "contradictions",
+      "methods"
+    ],
+    "reference_text": "contradictions:\nThe abstract does not mention any specific contradictions.\nmethods:\n- Dynamic Ensemble Reasoning (DER) paradigm\n- Markov Decision Process model for LLM ensemble reasoning\n- DER-Agent trained with a reward function to dynamically select an optimal answering route\n- Knowledge Transfer Prompt to enable subsequent LLM candidates to transfer complementary knowledge effectively",
+    "prediction_text": "contradictions:\nThe abstract does not mention any contradictions in the context of the research.\nmethods:\n- Dynamic Ensemble Reasoning (DER) paradigm\n- Modeling the LLM ensemble reasoning problem as a Markov Decision Process\n- Devising a reward function to train a DER-Agent\n- Developing a Knowledge Transfer Prompt",
+    "schema_check": {
+      "contradictions": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 42,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "Prompting has become a dominant paradigm for adapting large language models (LLMs). While discrete (textual) prompts are widely used for their interpretability, soft (parameter) prompts have recently gained traction in APIs. This is because they can encode information from more training samples while minimizing the user's token usage, leaving more space in the context window for task-specific input. However, soft prompts are tightly coupled to the LLM they are tuned on, limiting their generalization to other LLMs. This constraint is particularly problematic for efficiency and privacy: (1) tuning prompts on each LLM incurs high computational costs, especially as LLMs continue to grow in size. Additionally, (2) when the LLM is hosted externally, soft prompt tuning often requires sharing private data with the LLM provider. For instance, this is the case with the NVIDIA NeMo API. To address these issues, we propose POST (Privacy Of Soft prompt Transfer), a framework that enables private tuning of soft prompts on a small model and subsequently transfers these prompts to a larger LLM. POST uses knowledge distillation to derive a small model directly from the large LLM to improve prompt transferability, tunes the soft prompt locally, optionally with differential privacy guarantees, and transfers it back to the larger LLM using a small public dataset. Our experiments show that POST reduces computational costs, preserves privacy, and effectively transfers high-utility soft prompts.",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The method proposed, POST, assumes the availability of a small model for private tuning of soft prompts.\n- The effectiveness of POST in scenarios where a small model is not available for initial tuning is unclear.\ncontradictions:",
+    "prediction_text": "gaps:\n- The abstract does not specify the exact nature of the 'high-utility soft prompts' that POST effectively transfers.\n- It is unclear whether POST can be applied to all types of large language models or only those that support soft prompts.\ncontradictions:",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 43,
+    "instruction": "Compare this method with traditional approaches in the field.",
+    "input": "Large language models (LLMs) have shown potential in identifying qualitative causal relations, but their ability to perform quantitative causal reasoning -- estimating effect sizes that parametrize functional relationships -- remains underexplored in continuous domains. We introduce Linear-LLM-SCM, a plug-and-play benchmarking framework for evaluating LLMs on linear Gaussian structural causal model (SCM) parametrization when the DAG is given. The framework decomposes a DAG into local parent-child sets and prompts an LLM to produce a regression-style structural equation per node, which is aggregated and compared against available ground-truth parameters. Our experiments show several challenges in such benchmarking tasks, namely, strong stochasticity in the results in some of the models and susceptibility to DAG misspecification via spurious edges in the continuous domains. Across models, we observe substantial variability in coefficient estimates for some settings and sensitivity to structural and semantic perturbations, highlighting current limitations of LLMs as quantitative causal parameterizers. We also open-sourced the benchmarking framework so that researchers can utilize their DAGs and any off-the-shelf LLMs plug-and-play for evaluation in their domains effortlessly.",
+    "expected_fields": [
+      "comparison",
+      "summary"
+    ],
+    "reference_text": "comparison:\n- The study compares Large Language Models (LLMs) against ground-truth parameters in evaluating their ability to perform quantitative causal reasoning in linear Gaussian structural causal models (SCM) parametrization when the Directed Acyclic Graph (DAG) is given. The research highlights strong stochasticity in some models' results and susceptibility to DAG misspecification due to spurious edges in continuous domains.\nsummary:\n- The study introduces a new benchmarking framework, Linear-LLM-SCM, for evaluating Large Language Models (LLMs) in quantitative causal parameterization. The research reveals challenges such as stochasticity, sensitivity to structural and semantic perturbations, and susceptibility to DAG misspecification in continuous domains. Despite these limitations, the study also open-sources the benchmarking framework for researchers to utilize their own DAGs and off-the-shelf LLMs for evaluation in various domains.",
+    "prediction_text": "comparison:\n- The study compares the performance of large language models (LLMs) in estimating effect sizes that parametrize functional relationships (quantitative causal reasoning) with available ground-truth parameters in continuous domains.\nsummary:\n- The abstract introduces Linear-LLM-SCM, a benchmarking framework for evaluating LLMs on linear Gaussian structural causal model (SCM) parametrization when the DAG is given. The study shows that LLMs exhibit strong stochasticity in results and susceptibility to DAG misspecification via spurious edges in continuous domains. Across models, there is substantial variability in coefficient estimates for some settings and sensitivity to structural and semantic perturbations, highlighting current limitations of LLMs as quantitative causal parameterizers. The benchmarking framework is open-sourced to allow researchers to utilize their DAGs and any off-the-shelf LLMs for evaluation in their domains.",
+    "schema_check": {
+      "comparison": true,
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 44,
+    "instruction": "Critically evaluate this research and its proposed methodology.",
+    "input": "Collaborative information from user-item interactions is a fundamental source of signal in successful recommender systems. Recently, researchers have attempted to incorporate this knowledge into large language model-based recommender approaches (LLMRec) to enhance their performance. However, there has been little fundamental analysis of whether LLMs can effectively reason over collaborative information. In this paper, we analyze the ability of LLMs to reason about collaborative information in recommendation tasks, comparing their performance to traditional matrix factorization (MF) models. We propose a simple and effective method to improve LLMs' reasoning capabilities using retrieval-augmented generation (RAG) over the user-item interaction matrix with four different prompting strategies. Our results show that the LLM outperforms the MF model whenever we provide relevant information in a clear and easy-to-follow format, and prompt the LLM to reason based on it. We observe that with this strategy, in almost all cases, the more information we provide, the better the LLM performs.",
+    "expected_fields": [
+      "evaluation",
+      "methods"
+    ],
+    "reference_text": "evaluation:\nThe paper presents an analysis of the ability of Large Language Models (LLMs) to reason about collaborative information in recommendation tasks. The performance of LLMs was compared with traditional Matrix Factorization (MF) models. The results show that when relevant information is provided in a clear and easy-to-follow format, and the LLM is prompted to reason based on it, the LLM outperforms the MF model. It was also observed that with this strategy, in almost all cases, the more information provided, the better the LLM performs.\nmethods:\n- Incorporating collaborative information into Large Language Model-based recommender approaches (LLMRec).\n- Proposing a method to improve LLMs' reasoning capabilities using Retrieval-Augmented Generation (RAG) over the user-item interaction matrix with four different prompting strategies.",
+    "prediction_text": "evaluation:\nThe paper compares the performance of large language models (LLMs) and traditional matrix factorization (MF) models in reasoning about collaborative information in recommendation tasks. The evaluation is based on the ability of LLMs to outperform the MF model when provided with relevant information in a clear and easy-to-follow format, and prompted to reason based on it. The results show that the LLM performs better than the MF model in almost all cases, with the more information provided, the better the LLM performs.\nmethods:\n- Proposing a simple and effective method to improve LLMs' reasoning capabilities using retrieval-augmented generation (RAG) over the user-item interaction matrix with four different prompting strategies.",
+    "schema_check": {
+      "evaluation": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 45,
+    "instruction": "Identify the key methodology and common research gaps in this paper.",
+    "input": "Despite their impressive capabilities, aligned large language models (LLMs) often generate outputs that lack diversity. What drives this consistency in the generation? We investigate this phenomenon through the lens of probability concentration in the model's output distribution. To quantify this concentration, we introduce the *Branching Factor* (BF) -- a token-invariant measure of the effective number of plausible next steps during generation. Our empirical analysis reveals two key findings: (1) BF often decreases as generation progresses, suggesting that LLMs become more predictable as they generate. (2) alignment tuning substantially sharpens the model's output distribution from the outset, reducing BF by a factor of 2-5 overall, and up to an order of magnitude (e.g., from 12 to 1.2) at the beginning positions. This stark reduction helps explain why aligned models often appear less sensitive to decoding strategies. Building on this insight, we find this consistency has surprising implications for complex reasoning. Aligned Chain-of-Thought (CoT) models (e.g., DeepSeek-distilled models), for instance, leverage this effect; by generating longer reasoning chains, they push generation into later, more deterministic (lower BF) stages, resulting in more stable outputs. We hypothesize that alignment tuning does not fundamentally change a model's behavior, but instead steers it toward stylistic tokens (e.g., \"Sure\") that unlock low-entropy trajectories already present in the base model. This view is supported by nudging experiments, which show prompting base models with such tokens can similarly reduce BF. Together, our findings establish BF as a powerful diagnostic for understanding and controlling LLM outputs - clarifying how alignment reduces variability, how CoT promotes stable generations, and how base models can be steered away from diversity.",
+    "expected_fields": [
+      "methods",
+      "gaps"
+    ],
+    "reference_text": "methods:\n- Introduce the Branching Factor (BF) -- a token-invariant measure of the effective number of plausible next steps during generation.\n- Analyze the decrease in BF as generation progresses to quantify the model's predictability.\n- Investigate how alignment tuning affects the output distribution and reduces BF.\n- Explore how aligned Chain-of-Thought (CoT) models generate longer reasoning chains, pushing generation into later, more deterministic stages.\ngaps:\n- The study does not provide information on how to directly manipulate or control the BF during model training.\n- It remains unclear if there are potential drawbacks or limitations associated with the reduction in output diversity due to reduced BF.",
+    "prediction_text": "methods:\n- Investigation of probability concentration in the model's output distribution\n- Introduction of Branching Factor (BF) as a token-invariant measure of effective number of plausible next steps during generation\n- Empirical analysis to quantify BF in aligned large language models (LLMs)\n- Analysis of BF decrease as generation progresses\n- Comparison of BF before and after alignment tuning\n- Examination of the impact of alignment tuning on model's output distribution\n- Study of the effect of alignment tuning on base models using nudging experiments\ngaps:\n- Understanding why aligned models often appear less sensitive to decoding strategies\n- Clarifying how alignment reduces variability in LLMs\n- Investigating the role of alignment tuning in steering model behavior towards stylistic tokens\n- Exploring the implications of BF reduction for complex reasoning in LLMs",
+    "schema_check": {
+      "methods": true,
+      "gaps": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 46,
+    "instruction": "Find contradictions in this research and identify its methodology.",
+    "input": "Recent breakthroughs in Large-scale language models (LLMs) have demonstrated impressive performance on various tasks. The immense sizes of LLMs have led to very high resource demand and cost for running the models. Though the models are largely served using uniform high-caliber GPUs nowadays, utilizing a heterogeneous cluster with a mix of available high- and low-capacity GPUs can potentially substantially reduce the serving cost. There is a lack of designs to support efficient LLM serving using a heterogeneous cluster, while the current solutions focus on model partition and uniform compression among homogeneous devices. This paper proposes LLM-PQ, a system that advocates adaptive model quantization and phase-aware partition to improve LLM serving efficiency on heterogeneous GPU clusters. We carefully decide on mixed-precision model quantization together with phase-aware model partition and micro-batch sizing in distributed LLM serving with an efficient algorithm, to greatly enhance inference throughput while fulfilling user-specified model quality targets. Extensive experiments on production inference workloads in 11 different clusters demonstrate that LLM-PQ achieves up to 2.88x (2.26x on average) throughput improvement in inference, showing great advantages over state-of-the-art works.",
+    "expected_fields": [
+      "contradictions",
+      "methods"
+    ],
+    "reference_text": "contradictions:\nmethods:\n- Adaptive model quantization\n- Phase-aware partition\n- Mixed-precision model quantization\n- Phase-aware model partition\n- Micro-batch sizing\n- Efficient algorithm for distributed LLM serving",
+    "prediction_text": "contradictions:\nThe abstract does not mention any contradictions in the context provided.\nmethods:\n- LLM-PQ\n- Adaptive model quantization\n- Phase-aware model partition\n- Micro-batch sizing in distributed LLM serving\n- Efficient algorithm for deciding on mixed-precision model quantization, phase-aware model partition, and micro-batch sizing",
+    "schema_check": {
+      "contradictions": true,
+      "methods": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 47,
+    "instruction": "Summarize this research abstract in a concise paragraph.",
+    "input": "Large language models (LLMs) increasingly reach real-world applications, necessitating a better understanding of their behaviour. Their size and complexity complicate traditional assessment methods, causing the emergence of alternative approaches inspired by the field of psychology. Recent studies administering psychometric questionnaires to LLMs report human-like traits in LLMs, potentially influencing LLM behaviour. However, this approach suffers from a validity problem: it presupposes that these traits exist in LLMs and that they are measurable with tools designed for humans. Typical procedures rarely acknowledge the validity problem in LLMs, comparing and interpreting average LLM scores. This study investigates this problem by comparing latent structures of personality between humans and three LLMs using two validated personality questionnaires. Findings suggest that questionnaires designed for humans do not validly measure similar constructs in LLMs, and that these constructs may not exist in LLMs at all, highlighting the need for psychometric analyses of LLM responses to avoid chasing cognitive phantoms.   Keywords: large language models, psychometrics, machine behaviour, latent variable modeling, validity",
+    "expected_fields": [
+      "summary"
+    ],
+    "reference_text": "summary:\n- This study investigates the validity problem of using psychometric questionnaires to measure human-like traits in Large Language Models (LLMs). The findings suggest that these questionnaires, designed for humans, do not accurately measure similar constructs in LLMs. It is unclear if these constructs even exist in LLMs at all. The study emphasizes the need for psychometric analyses of LLM responses to avoid interpreting cognitive phantoms.",
+    "prediction_text": "summary:\n- This study investigates the validity problem in Large Language Models (LLMs) by comparing latent structures of personality between humans and three LLMs using two validated personality questionnaires. Findings suggest that questionnaires designed for humans do not validly measure similar constructs in LLMs, and that these constructs may not exist in LLMs at all. The study emphasizes the need for psychometric analyses of LLM responses to avoid chasing cognitive phantoms.",
+    "schema_check": {
+      "summary": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 48,
+    "instruction": "Give me a technical breakdown of this paper.",
+    "input": "Large language models (LLMs) may generate outputs that are misaligned with user intent, lack contextual grounding, or exhibit hallucinations during conversation, which compromises the reliability of LLM-based applications. This review aimed to identify and analyze techniques that align LLM responses with conversational goals, ensure grounding, and reduce hallucination and topic drift. We conducted a Rapid Review guided by the PRISMA framework and the PICO strategy to structure the search, filtering, and selection processes. The alignment strategies identified were categorized according to the LLM lifecycle phase in which they operate: inference-time, post-training, and reinforcement learning-based methods. Among these, inference-time approaches emerged as particularly efficient, aligning outputs without retraining while supporting user intent, contextual grounding, and hallucination mitigation. The reviewed techniques provided structured mechanisms for improving the quality and reliability of LLM responses across key alignment objectives.",
+    "expected_fields": [
+      "summary",
+      "methods",
+      "gaps",
+      "evaluation"
+    ],
+    "reference_text": "summary:\n- The abstract discusses challenges related to large language models (LLMs) such as misaligned outputs with user intent, lack of contextual grounding, and hallucinations during conversation that affect the reliability of LLM-based applications.\n- A review was conducted to identify techniques for aligning LLM responses with conversational goals, ensuring grounding, and reducing hallucination and topic drift.\nmethods:\n- The Rapid Review was guided by PRISMA framework and PICO strategy to structure the search, filtering, and selection processes.\n- Alignment strategies identified were categorized according to LLM lifecycle phase: inference-time, post-training, and reinforcement learning-based methods.\n- Inference-time approaches emerged as particularly efficient for aligning outputs without retraining while supporting user intent, contextual grounding, and hallucination mitigation.\ngaps:\n- The text does not explicitly mention any identified gaps in the current state of research or techniques for LLM alignment.\nevaluation:\n- The effectiveness and impact of the reviewed techniques on improving the quality and reliability of LLM responses across key alignment objectives were not directly evaluated in this abstract.",
+    "prediction_text": "summary:\n- This review aims to identify and analyze techniques that align Large Language Models (LLMs) responses with conversational goals, ensure contextual grounding, and reduce hallucination and topic drift.\n- The review was conducted using a Rapid Review guided by the PRISMA framework and the PICO strategy.\nmethods:\n- The alignment strategies identified were categorized according to the LLM lifecycle phase in which they operate: inference-time, post-training, and reinforcement learning-based methods.\n- Inference-time approaches emerged as particularly efficient, aligning outputs without retraining while supporting user intent, contextual grounding, and hallucination mitigation.\ngaps:\n- The review did not provide specific details about the effectiveness or performance of each identified technique.\nevaluation:\n- The reviewed techniques provided structured mechanisms for improving the quality and reliability of LLM responses across key alignment objectives.",
+    "schema_check": {
+      "summary": true,
+      "methods": true,
+      "gaps": true,
+      "evaluation": true
+    },
+    "reference_type": "dict"
+  },
+  {
+    "id": 49,
+    "instruction": "What are the research gaps and contradictions in this text?",
+    "input": "LLM-as-a-Judge is a widely used method for evaluating the performance of Large Language Models (LLMs) across various tasks. We address the challenge of quantifying the uncertainty of LLM-as-a-Judge evaluations. While uncertainty quantification has been well-studied in other domains, applying it effectively to LLMs poses unique challenges due to their complex decision-making capabilities and computational demands. In this paper, we introduce a novel method for quantifying uncertainty designed to enhance the trustworthiness of LLM-as-a-Judge evaluations. The method quantifies uncertainty by analyzing the relationships between generated assessments and possible ratings. By cross-evaluating these relationships and constructing a confusion matrix based on token probabilities, the method derives labels of high or low uncertainty. We evaluate our method across multiple benchmarks, demonstrating a strong correlation between the accuracy of LLM evaluations and the derived uncertainty scores. Our findings suggest that this method can significantly improve the reliability and consistency of LLM-as-a-Judge evaluations.",
+    "expected_fields": [
+      "gaps",
+      "contradictions"
+    ],
+    "reference_text": "gaps:\n- The paper does not explicitly mention any identified gaps in the existing methods for quantifying uncertainty in LLM-as-a-Judge evaluations.\ncontradictions:",
+    "prediction_text": "gaps:\n- The paper does not provide details about the specific benchmarks used for evaluation.\n- It is unclear how the method handles cases where LLM-as-a-Judge evaluations are inconsistent with human judgments.\ncontradictions:",
+    "schema_check": {
+      "gaps": true,
+      "contradictions": true
+    },
+    "reference_type": "dict"
+  }
+]
